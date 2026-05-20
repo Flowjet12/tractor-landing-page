@@ -144,6 +144,13 @@ export default function LandingPage() {
     ],
   };
 
+  const ownerBenefits = [
+    "Owner on every job site",
+    "Clear communication from quote to cleanup",
+    "Small-acreage jobs welcome",
+    "No big-contractor overhead markup",
+  ];
+
   return (
     <main className="overflow-hidden bg-dust text-ink">
       <script
@@ -159,10 +166,15 @@ export default function LandingPage() {
             className="flex items-center gap-3"
             aria-label="Right Size Land & Tractor home"
           >
-            <span className="flex h-11 w-11 items-center justify-center rounded-full bg-rust text-white shadow-lg">
-              <Tractor className="h-6 w-6" aria-hidden="true" />
-            </span>
-            <span>
+            <Image
+              src="/logo.svg"
+              alt="Right Size Land & Tractor logo"
+              width={120}
+              height={34}
+              className="h-9 w-auto rounded"
+              priority
+            />
+            <span className="hidden sm:block">
               <span className="block font-display text-xl font-bold uppercase tracking-wide">
                 Lone Star
               </span>
@@ -227,8 +239,20 @@ export default function LandingPage() {
         id="top"
         className="relative isolate min-h-screen bg-field pt-28 text-white sm:pt-32"
       >
+        <Image
+          src="/images/projects/HeroImage.jpg"
+          alt="Texas tractor service hero"
+          fill
+          className="-z-20 object-cover"
+          priority
+          sizes="100vw"
+        />
         <div
-          className="absolute inset-0 -z-10 bg-grit bg-[length:18px_18px] opacity-35"
+          className="absolute inset-0 -z-10 bg-gradient-to-r from-ink/90 via-ink/75 to-ink/50"
+          aria-hidden="true"
+        />
+        <div
+          className="absolute inset-0 -z-10 bg-grit bg-[length:18px_18px] opacity-20"
           aria-hidden="true"
         />
         <div
@@ -274,6 +298,7 @@ export default function LandingPage() {
                 "Fast call backs",
                 "Small jobs accepted",
                 "Honest local pricing",
+                "5-star local reviews",
               ].map((item) => (
                 <div
                   key={item}
@@ -547,6 +572,109 @@ export default function LandingPage() {
         </div>
       </section>
 
+      <section className="bg-white py-20 sm:py-24">
+        <div className="mx-auto grid max-w-7xl gap-10 px-4 sm:px-6 lg:grid-cols-2 lg:px-8">
+          <div>
+            <p className="font-bold uppercase tracking-[0.3em] text-rust">
+              Owner-operated promise
+            </p>
+            <h2 className="mt-3 font-display text-4xl font-black uppercase leading-tight text-ink sm:text-5xl">
+              You hire the owner, not a revolving crew
+            </h2>
+            <p className="mt-5 text-lg leading-8 text-steel">
+              Texas acreage projects are personal. You need someone who treats
+              your land like it matters, shows up when promised, and follows
+              through without excuses.
+            </p>
+            <div className="mt-6 grid gap-3">
+              {ownerBenefits.map((b) => (
+                <div
+                  key={b}
+                  className="rounded-xl border border-sand/70 bg-dust px-4 py-3 font-semibold text-charcoal"
+                >
+                  {b}
+                </div>
+              ))}
+            </div>
+          </div>
+          <div className="rounded-3xl bg-ink p-8 text-dust shadow-rugged">
+            <h3 className="font-display text-3xl font-black uppercase text-white">
+              Built for Texas acreage owners
+            </h3>
+            <p className="mt-4 leading-8">
+              When life gets busy, projects slip. We help you reclaim your time,
+              raise property value, and finally cross off the hard jobs that
+              keep getting pushed to another weekend.
+            </p>
+            <p className="mt-4 rounded-xl bg-white/10 p-4 font-semibold">
+              Trust indicators: insured operation, dependable equipment,
+              documented transformations, and clear scope before work starts.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section className="py-20 sm:py-24" id="transformations">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <p className="font-bold uppercase tracking-[0.3em] text-rust">
+            Project Transformation
+          </p>
+          <h2 className="mt-3 font-display text-4xl font-black uppercase sm:text-5xl">
+            Raw ground to finished shed pad
+          </h2>
+          <div className="mt-10 grid gap-6 md:grid-cols-2 lg:grid-cols-4">
+            {[
+              ["ShedPadBefore.jpg", "Before: rough native ground"],
+              ["ShedPadDuring1.jpg", "During: clearing and first pass"],
+              ["ShedPadDuring2.jpg", "During: shaping and compaction"],
+              ["ShedPadDone.jpg", "Done: finished shed pad ready for build"],
+            ].map(([src, cap], i) => (
+              <figure
+                key={src}
+                className="group overflow-hidden rounded-2xl border border-sand/70 bg-white shadow-card"
+              >
+                <div className="relative aspect-[4/5]">
+                  <Image
+                    src={`/images/projects/${src}`}
+                    alt={cap}
+                    fill
+                    className="object-cover transition duration-500 group-hover:scale-105"
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 25vw"
+                  />
+                </div>
+                <figcaption className="p-4 text-sm font-semibold text-charcoal">
+                  Step {i + 1}: {cap}
+                </figcaption>
+              </figure>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="bg-ink py-20 text-white sm:py-24">
+        <div className="mx-auto grid max-w-7xl gap-8 px-4 sm:px-6 lg:grid-cols-2 lg:px-8">
+          <div>
+            <p className="font-bold uppercase tracking-[0.3em] text-sand">
+              Payment flexibility
+            </p>
+            <h2 className="mt-3 font-display text-4xl font-black uppercase sm:text-5xl">
+              Get it done now, pay in practical phases
+            </h2>
+            <p className="mt-5 text-lg leading-8 text-dust/80">
+              For larger acreage projects, we can structure staged work and
+              milestone-based payments so you can move forward without
+              overcommitting all at once.
+            </p>
+          </div>
+          <div className="rounded-3xl border border-white/15 bg-white/10 p-7">
+            <ul className="space-y-3 text-dust/90">
+              <li>• Transparent quote and scope before work begins</li>
+              <li>• Phase-friendly project planning for bigger jobs</li>
+              <li>• Payment methods discussed during estimate call</li>
+            </ul>
+          </div>
+        </div>
+      </section>
       {/* Social proof uses concrete situations instead of vague praise. */}
       <section className="py-20 sm:py-28">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
@@ -627,6 +755,17 @@ export default function LandingPage() {
             </div>
           </div>
         </div>
+      </section>
+
+      <section className="relative h-[300px] sm:h-[380px]">
+        <Image
+          src="/images/projects/FinalImage.jpg"
+          alt="Completed land improvement project"
+          fill
+          className="object-cover"
+          sizes="100vw"
+        />
+        <div className="absolute inset-0 bg-ink/35" aria-hidden="true" />
       </section>
 
       {/* Contact section captures quote requests while still prioritizing phone calls. */}
