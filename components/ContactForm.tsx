@@ -3,7 +3,7 @@
 import { FormEvent, useState } from "react";
 import { Send } from "./Icons";
 
-const recipient = "quotes@lonestartractorworks.com";
+const recipient = "anthonypmusetti@gmail.com";
 
 type FormState = {
   name: string;
@@ -69,7 +69,7 @@ export default function ContactForm() {
             value={form.phone}
             onChange={(event) => updateField("phone", event.target.value)}
             className="rounded-xl border-sand bg-dust/40 px-4 py-3 text-charcoal shadow-sm focus:border-rust focus:ring-rust"
-            placeholder="(210) 555-0147"
+            placeholder="(830) 302-6833"
           />
         </label>
       </div>
@@ -141,8 +141,8 @@ export default function ContactForm() {
 
       <p className="text-center text-xs text-steel">
         Prefer talking it through? Call{" "}
-        <a href="tel:+12105550147" className="font-bold text-cedar underline">
-          (210) 555-0147
+        <a href="tel:+18303026833" className="font-bold text-cedar underline">
+          (830) 302-6833
         </a>
         . Text photos of the job site for a faster estimate.
       </p>

@@ -21,8 +21,8 @@ import {
 } from "./Icons";
 import ContactForm from "./ContactForm";
 
-const phoneNumber = "(210) 555-0147";
-const phoneHref = "tel:+12105550147";
+const phoneNumber = "(830) 302-6833";
+const phoneHref = "tel:+18303026833";
 
 const navLinks = [
   { href: "#services", label: "Services" },
@@ -87,21 +87,15 @@ const advantages = [
 const testimonials = [
   {
     quote:
-      "He cleaned up two acres of cedar and mesquite that had been on my list for years. Showed up when he said he would and left the place looking better than expected.",
-    name: "Mark R.",
-    place: "Bulverde acreage owner",
+      "Tony did a fantastic job! Great guy and hard worker. Went above and beyond when it came to clearing a TON of brush from our lot. It was an incredible blessing. Can’t recommend highly enough!",
+    name: "Garrett",
+    place: "Helotes",
   },
   {
     quote:
-      "Our caliche driveway was washing out every rain. The grading and drainage work made an immediate difference, and the price was straightforward.",
-    name: "Jenna P.",
-    place: "Boerne homeowner",
-  },
-  {
-    quote:
-      "I was going to rent a tractor and do it myself. Glad I didn’t. He finished in a day what would have eaten three weekends.",
-    name: "Carlos M.",
-    place: "Castroville ranchette",
+      "Right Size was responsive, on-time, and did everything I asked - I was glad to have my weekend back!",
+    name: "Chelo",
+    place: "Boerne",
   },
 ];
 
@@ -127,11 +121,11 @@ export default function LandingPage() {
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
-    name: "Lone Star Tractor Works",
+    name: "Right Size Land & Tractor",
     description:
       "Owner-operated tractor and land management services in the Texas Hill Country and San Antonio area.",
     telephone: "+1-210-555-0147",
-    email: "quotes@lonestartractorworks.com",
+    email: "anthonypmusetti@gmail.com",
     areaServed: [
       "San Antonio",
       "Boerne",
@@ -163,7 +157,7 @@ export default function LandingPage() {
           <a
             href="#top"
             className="flex items-center gap-3"
-            aria-label="Lone Star Tractor Works home"
+            aria-label="Right Size Land & Tractor home"
           >
             <span className="flex h-11 w-11 items-center justify-center rounded-full bg-rust text-white shadow-lg">
               <Tractor className="h-6 w-6" aria-hidden="true" />
@@ -691,7 +685,7 @@ export default function LandingPage() {
         <div className="mx-auto flex max-w-7xl flex-col gap-8 md:flex-row md:items-center md:justify-between">
           <div>
             <p className="font-display text-2xl font-black uppercase">
-              Lone Star Tractor Works
+              Right Size Land & Tractor
             </p>
             <p className="mt-2 text-sm font-semibold text-dust/70">
               Owner-operated tractor services for residential and rural Texas
@@ -703,12 +697,15 @@ export default function LandingPage() {
               {phoneNumber}
             </a>
             <a
-              href="mailto:quotes@lonestartractorworks.com"
+              href="mailto:anthonypmusetti@gmail.com"
               className="hover:text-sand"
             >
-              quotes@lonestartractorworks.com
+              anthonypmusetti@gmail.com
             </a>
-            <p>Instagram / Facebook / Google Business Profile</p>
+            <p>
+              Facebook / Instagram / Google Business Profile:
+              https://share.google/xonNRwSDCQln7fcCJ
+            </p>
           </div>
         </div>
       </footer>
