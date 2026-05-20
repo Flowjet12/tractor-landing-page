@@ -1,4 +1,4 @@
-# Right Size Land & Tractor Landing Page
+# Lone Star Tractor Works Landing Page
 
 A production-ready Next.js landing page for an owner-operated tractor and land management business serving the Texas Hill Country and greater San Antonio area.
 
@@ -57,12 +57,3 @@ Before going live, replace the sample business details with the real ones:
 - Social profile placeholders in the footer
 - Before/after placeholders with real project photos
 - Service-area city list if the business covers a different part of Texas
-
-## Project photos
-
-Add your before/after images here:
-
-- `public/images/projects/before`
-- `public/images/projects/after`
-
-These folders are already created so you can drop in job photos and wire them into the gallery section.

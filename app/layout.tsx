@@ -3,7 +3,7 @@ import type { ReactNode } from "react";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://rightsizelandandtractor.com"),
+  metadataBase: new URL("https://lonestartractorworks.com"),
   title:
     "Texas Tractor Services | Brush Clearing, Driveway Grading & Dirt Work",
   description:
@@ -23,8 +23,8 @@ export const metadata: Metadata = {
       "Fast responses, honest pricing, and rugged tractor work for rural homes, ranches, and small acreage near San Antonio.",
     type: "website",
     locale: "en_US",
-    url: "https://rightsizelandandtractor.com",
-    siteName: "Right Size Land & Tractor",
+    url: "https://lonestartractorworks.com",
+    siteName: "Lone Star Tractor Works",
   },
   alternates: {
     canonical: "/",
