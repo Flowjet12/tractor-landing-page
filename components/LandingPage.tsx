@@ -1,4 +1,3 @@
-import Image from "next/image";
 import {
   ArrowRight,
   BadgeCheck,
@@ -101,21 +100,6 @@ const testimonials = [
 ];
 
 const projectCards = [
-  {
-    title: "Driveway Regrade",
-    before: "Eroded and rutted approach",
-    after: "Compacted, crowned gravel lane",
-  },
-  {
-    title: "Acreage Brush Reset",
-    before: "Dense brush blocking access",
-    after: "Open sight lines and usable space",
-  },
-  {
-    title: "Drainage Recovery",
-    before: "Standing water after storms",
-    after: "Improved flow and dry access",
-  },
   {
     title: "Cedar & Brush Reclaim",
     before: "Overgrown fence line",
