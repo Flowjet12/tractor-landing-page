@@ -1,4 +1,6 @@
 import Image from "next/image";
+
+
 import {
   ArrowRight,
   BadgeCheck,
@@ -100,6 +102,24 @@ const testimonials = [
   },
 ];
 
+const projectCards = [
+  {
+    title: "Cedar & Brush Reclaim",
+    before: "Overgrown fence line",
+    after: "Clean access for maintenance",
+  },
+  {
+    title: "Washed-Out Driveway",
+    before: "Ruts and standing water",
+    after: "Re-crowned gravel surface",
+  },
+  {
+    title: "Shop Pad Prep",
+    before: "Uneven native ground",
+    after: "Ready for base material",
+  },
+];
+
 export default function LandingPage() {
   const jsonLd = {
     "@context": "https://schema.org",
@@ -150,13 +170,21 @@ export default function LandingPage() {
             aria-label="Right Size Land & Tractor home"
           >
             <Image
-              src="/images/projects/Logo.png"
+              src="/logo.svg"
               alt="Right Size Land & Tractor logo"
               width={120}
               height={34}
               className="h-9 w-auto rounded"
               priority
             />
+            <span className="hidden sm:block">
+              <span className="block font-display text-xl font-bold uppercase tracking-wide">
+                Lone Star
+              </span>
+              <span className="block -mt-1 text-xs font-semibold uppercase tracking-[0.26em] text-sand">
+                Tractor Works
+              </span>
+            </span>
           </a>
 
           <nav
@@ -447,6 +475,46 @@ export default function LandingPage() {
               Plan my project{" "}
               <ArrowRight className="h-5 w-5" aria-hidden="true" />
             </a>
+          </div>
+
+          <div className="mt-12 grid gap-6 lg:grid-cols-3">
+            {projectCards.map((project, index) => (
+              <article
+                key={project.title}
+                className="overflow-hidden rounded-3xl border border-sand/70 bg-white shadow-card"
+              >
+                <div className="grid grid-cols-2">
+                  <div className="relative min-h-56 bg-[linear-gradient(135deg,#4d5650,#233d2d)] p-5 text-white">
+                    <span className="rounded-full bg-ink/70 px-3 py-1 text-xs font-black uppercase tracking-wide">
+                      Before
+                    </span>
+                    <div className="absolute bottom-5 left-5 right-5">
+                      <p className="font-display text-2xl font-bold uppercase">
+                        {project.before}
+                      </p>
+                    </div>
+                  </div>
+                  <div className="relative min-h-56 bg-[linear-gradient(135deg,#d8c39f,#c56b2d)] p-5 text-ink">
+                    <span className="rounded-full bg-white/80 px-3 py-1 text-xs font-black uppercase tracking-wide">
+                      After
+                    </span>
+                    <div className="absolute bottom-5 left-5 right-5">
+                      <p className="font-display text-2xl font-bold uppercase">
+                        {project.after}
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div className="p-6">
+                  <p className="text-sm font-bold uppercase tracking-[0.22em] text-rust">
+                    Project 0{index + 1}
+                  </p>
+                  <h3 className="mt-2 font-display text-2xl font-black uppercase">
+                    {project.title}
+                  </h3>
+                </div>
+              </article>
+            ))}
           </div>
         </div>
       </section>
