@@ -127,7 +127,7 @@ export default function LandingPage() {
     name: "Right Size Land & Tractor",
     description:
       "Owner-operated tractor and land management services in the Texas Hill Country and San Antonio area.",
-    telephone: "+1-210-555-0147",
+    telephone: "+1-830-302-6833",
     email: "anthonypmusetti@gmail.com",
     areaServed: [
       "San Antonio",
