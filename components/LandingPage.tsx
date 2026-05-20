@@ -170,21 +170,13 @@ export default function LandingPage() {
             aria-label="Right Size Land & Tractor home"
           >
             <Image
-              src="/logo.svg"
+              src="/images/projects/LogoMark.svg"
               alt="Right Size Land & Tractor logo"
               width={120}
               height={34}
               className="h-9 w-auto rounded"
               priority
             />
-            <span className="hidden sm:block">
-              <span className="block font-display text-xl font-bold uppercase tracking-wide">
-                Lone Star
-              </span>
-              <span className="block -mt-1 text-xs font-semibold uppercase tracking-[0.26em] text-sand">
-                Tractor Works
-              </span>
-            </span>
           </a>
 
           <nav
@@ -451,74 +443,6 @@ export default function LandingPage() {
         </div>
       </section>
 
-      {/* Gallery placeholders give prospects a clear mental image while real project photos are gathered. */}
-      <section id="projects" className="py-20 sm:py-28">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="flex flex-col justify-between gap-6 md:flex-row md:items-end">
-            <div className="max-w-3xl">
-              <p className="font-bold uppercase tracking-[0.3em] text-rust">
-                Before / after
-              </p>
-              <h2 className="mt-3 font-display text-4xl font-black uppercase leading-tight sm:text-5xl">
-                Project results worth showing
-              </h2>
-              <p className="mt-5 text-lg leading-8 text-steel">
-                Swap these placeholders with real photos as jobs are completed.
-                The layout is built to make transformations obvious on mobile
-                and desktop.
-              </p>
-            </div>
-            <a
-              href="#contact"
-              className="inline-flex items-center gap-2 self-start rounded-full bg-cedar px-5 py-3 font-black uppercase tracking-wide text-white transition hover:bg-moss md:self-auto"
-            >
-              Plan my project{" "}
-              <ArrowRight className="h-5 w-5" aria-hidden="true" />
-            </a>
-          </div>
-
-          <div className="mt-12 grid gap-6 lg:grid-cols-3">
-            {projectCards.map((project, index) => (
-              <article
-                key={project.title}
-                className="overflow-hidden rounded-3xl border border-sand/70 bg-white shadow-card"
-              >
-                <div className="grid grid-cols-2">
-                  <div className="relative min-h-56 bg-[linear-gradient(135deg,#4d5650,#233d2d)] p-5 text-white">
-                    <span className="rounded-full bg-ink/70 px-3 py-1 text-xs font-black uppercase tracking-wide">
-                      Before
-                    </span>
-                    <div className="absolute bottom-5 left-5 right-5">
-                      <p className="font-display text-2xl font-bold uppercase">
-                        {project.before}
-                      </p>
-                    </div>
-                  </div>
-                  <div className="relative min-h-56 bg-[linear-gradient(135deg,#d8c39f,#c56b2d)] p-5 text-ink">
-                    <span className="rounded-full bg-white/80 px-3 py-1 text-xs font-black uppercase tracking-wide">
-                      After
-                    </span>
-                    <div className="absolute bottom-5 left-5 right-5">
-                      <p className="font-display text-2xl font-bold uppercase">
-                        {project.after}
-                      </p>
-                    </div>
-                  </div>
-                </div>
-                <div className="p-6">
-                  <p className="text-sm font-bold uppercase tracking-[0.22em] text-rust">
-                    Project 0{index + 1}
-                  </p>
-                  <h3 className="mt-2 font-display text-2xl font-black uppercase">
-                    {project.title}
-                  </h3>
-                </div>
-              </article>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* Local relevance and city names support SEO for high-intent nearby searches. */}
       <section id="service-area" className="bg-white py-20 sm:py-28">
         <div className="mx-auto grid max-w-7xl gap-10 px-4 sm:px-6 lg:grid-cols-[1fr_.9fr] lg:px-8">
@@ -609,10 +533,6 @@ export default function LandingPage() {
               raise property value, and finally cross off the hard jobs that
               keep getting pushed to another weekend.
             </p>
-            <p className="mt-4 rounded-xl bg-white/10 p-4 font-semibold">
-              Trust indicators: insured operation, dependable equipment,
-              documented transformations, and clear scope before work starts.
-            </p>
           </div>
         </div>
       </section>
@@ -654,30 +574,6 @@ export default function LandingPage() {
         </div>
       </section>
 
-      <section className="bg-ink py-20 text-white sm:py-24">
-        <div className="mx-auto grid max-w-7xl gap-8 px-4 sm:px-6 lg:grid-cols-2 lg:px-8">
-          <div>
-            <p className="font-bold uppercase tracking-[0.3em] text-sand">
-              Payment flexibility
-            </p>
-            <h2 className="mt-3 font-display text-4xl font-black uppercase sm:text-5xl">
-              Get it done now, pay in practical phases
-            </h2>
-            <p className="mt-5 text-lg leading-8 text-dust/80">
-              For larger acreage projects, we can structure staged work and
-              milestone-based payments so you can move forward without
-              overcommitting all at once.
-            </p>
-          </div>
-          <div className="rounded-3xl border border-white/15 bg-white/10 p-7">
-            <ul className="space-y-3 text-dust/90">
-              <li>• Transparent quote and scope before work begins</li>
-              <li>• Phase-friendly project planning for bigger jobs</li>
-              <li>• Payment methods discussed during estimate call</li>
-            </ul>
-          </div>
-        </div>
-      </section>
       {/* Social proof uses concrete situations instead of vague praise. */}
       <section className="py-20 sm:py-28">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
@@ -723,24 +619,29 @@ export default function LandingPage() {
         </div>
       </section>
 
-      {/* CTA reinforces urgency and frames the purchase around recovered time and property value. */}
-      <section className="bg-charcoal px-4 py-16 text-white sm:px-6 lg:px-8">
-        <div className="mx-auto max-w-7xl overflow-hidden rounded-[2rem] bg-field p-8 shadow-rugged sm:p-12 lg:p-16">
-          <div className="grid gap-10 lg:grid-cols-[1fr_auto] lg:items-center">
-            <div>
-              <p className="font-bold uppercase tracking-[0.3em] text-sand">
-                Ready when you are
-              </p>
-              <h2 className="mt-3 font-display text-4xl font-black uppercase leading-tight sm:text-5xl">
-                Stop staring at the same project every weekend
-              </h2>
-              <p className="mt-5 max-w-3xl text-lg leading-8 text-dust/[0.82]">
-                Get a realistic plan, a fair quote, and an owner-operator who
-                respects your property. One call can turn “someday” into
-                scheduled work.
-              </p>
-            </div>
-            <div className="flex flex-col gap-3 sm:flex-row lg:flex-col">
+      <section className="relative isolate overflow-hidden px-4 py-24 text-white sm:px-6 lg:px-8">
+        <Image
+          src="/images/projects/FinalImage.jpg"
+          alt="Completed land improvement project"
+          fill
+          className="-z-20 object-cover"
+          sizes="100vw"
+        />
+        <div className="absolute inset-0 -z-10 bg-ink/55" aria-hidden="true" />
+        <div className="mx-auto max-w-7xl">
+          <div className="max-w-4xl rounded-[2rem] border border-white/20 bg-ink/70 p-8 shadow-rugged backdrop-blur sm:p-12">
+            <p className="font-bold uppercase tracking-[0.3em] text-sand">
+              Ready when you are
+            </p>
+            <h2 className="mt-3 font-display text-4xl font-black uppercase leading-tight sm:text-5xl">
+              Stop staring at the same project every weekend
+            </h2>
+            <p className="mt-5 max-w-3xl text-lg leading-8 text-dust/[0.9]">
+              Get a realistic plan, a fair quote, and an owner-operator who
+              respects your property. One call can turn “someday” into scheduled
+              work.
+            </p>
+            <div className="mt-8 flex flex-col gap-3 sm:flex-row">
               <a
                 href={phoneHref}
                 className="inline-flex items-center justify-center gap-3 rounded-xl bg-rust px-7 py-4 text-lg font-black uppercase tracking-wide text-white shadow-rugged transition hover:bg-mesquite"
@@ -758,17 +659,6 @@ export default function LandingPage() {
             </div>
           </div>
         </div>
-      </section>
-
-      <section className="relative h-[300px] sm:h-[380px]">
-        <Image
-          src="/images/projects/FinalImage.jpg"
-          alt="Completed land improvement project"
-          fill
-          className="object-cover"
-          sizes="100vw"
-        />
-        <div className="absolute inset-0 bg-ink/35" aria-hidden="true" />
       </section>
 
       {/* Contact section captures quote requests while still prioritizing phone calls. */}
