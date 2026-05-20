@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 90" role="img" aria-label="Right Size Land and Tractor">
+  <rect width="320" height="90" rx="14" fill="#11110f"/>
+  <circle cx="46" cy="45" r="26" fill="#c56b2d"/>
+  <path d="M28 47h36M36 37h18M39 57h18" stroke="#f4ead8" stroke-width="4" stroke-linecap="round"/>
+  <text x="84" y="39" fill="#f4ead8" font-family="Arial, sans-serif" font-size="21" font-weight="700">RIGHT SIZE</text>
+  <text x="84" y="63" fill="#d8c39f" font-family="Arial, sans-serif" font-size="18" font-weight="600">LAND &amp; TRACTOR</text>
+</svg>
