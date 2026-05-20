@@ -1,0 +1,53 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: #f4ead8;
+  color: #11110f;
+}
+
+/* Keeps anchored sections visible below the sticky navigation. */
+section {
+  scroll-margin-top: 96px;
+}
+
+/* Reusable utility for a subtle, premium western texture without image downloads. */
+.texture-overlay {
+  background-image:
+    radial-gradient(
+      circle at 18% 20%,
+      rgba(216, 195, 159, 0.18),
+      transparent 24%
+    ),
+    radial-gradient(
+      circle at 82% 0%,
+      rgba(197, 107, 45, 0.16),
+      transparent 22%
+    ),
+    radial-gradient(circle at 72% 70%, rgba(56, 82, 59, 0.18), transparent 28%);
+}
+
+/* Animation helpers are intentionally subtle so the page feels rugged, not flashy. */
+@keyframes rise-in {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-rise-in {
+  animation: rise-in 700ms ease-out both;
+}
