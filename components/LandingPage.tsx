@@ -1,4 +1,6 @@
 import Image from "next/image";
+
+
 import {
   ArrowRight,
   BadgeCheck,
@@ -28,6 +30,7 @@ const phoneHref = "tel:+18303026833";
 const navLinks = [
   { href: "#services", label: "Services" },
   { href: "#why-us", label: "Why Us" },
+  { href: "#projects", label: "Projects" },
   { href: "#service-area", label: "Service Area" },
   { href: "#contact", label: "Get Quote" },
 ];
@@ -96,6 +99,24 @@ const testimonials = [
       "Right Size was responsive, on-time, and did everything I asked - I was glad to have my weekend back!",
     name: "Chelo",
     place: "Boerne",
+  },
+];
+
+const projectCards = [
+  {
+    title: "Cedar & Brush Reclaim",
+    before: "Overgrown fence line",
+    after: "Clean access for maintenance",
+  },
+  {
+    title: "Washed-Out Driveway",
+    before: "Ruts and standing water",
+    after: "Re-crowned gravel surface",
+  },
+  {
+    title: "Shop Pad Prep",
+    before: "Uneven native ground",
+    after: "Ready for base material",
   },
 ];
 
