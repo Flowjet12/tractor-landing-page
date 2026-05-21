@@ -158,9 +158,14 @@ export default function LandingPage() {
               className="h-9 w-auto rounded"
               priority
             />
-            <span className="font-display text-sm font-black uppercase tracking-wide text-dust sm:text-xl">
-              Right Size Land & Tractor
+            <span className="block">
+              <span className="block font-display text-base font-black uppercase tracking-wide text-white sm:text-xl">
+                Right Size Land & Tractor
             </span>
+            <span className="hidden text-xs font-semibold uppercase tracking-[0.22em] text-sand sm:block">
+              Owner Operated
+            </span>
+  </span>
           </a>
 
           <nav
@@ -358,13 +363,13 @@ export default function LandingPage() {
       <section id="services" className="py-20 sm:py-28">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl">
-            <p className="font-bold uppercase tracking-[0.3em] text-sand">
+            <p className="font-bold uppercase tracking-[0.3em] text-rust">
               Tractor services
             </p>
             <h2 className="mt-3 font-display text-4xl font-black uppercase leading-tight text-ink sm:text-5xl">
               From overgrown to usable
             </h2>
-            <p className="mt-5 text-lg leading-8 text-dust/80">
+            <p className="mt-5 text-lg leading-8 text-steel">
               Whether you know exactly what you want or just know the property
               is getting away from you, we can help plan the practical way to
               get it done.
