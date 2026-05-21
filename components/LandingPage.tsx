@@ -722,32 +722,28 @@ export default function LandingPage() {
 
       {/* Footer includes local-business basics and placeholders for future social profiles. */}
       <footer className="border-t border-white/10 bg-ink px-4 py-10 text-white sm:px-6 lg:px-8">
-        <div className="mx-auto flex max-w-7xl flex-col gap-8 md:flex-row md:items-center md:justify-between">
-          <div>
-            <p className="font-display text-2xl font-black uppercase">
-              Right Size Land & Tractor
-            </p>
-            <p className="mt-2 text-sm font-semibold text-dust/70">
-              Owner-operated tractor services for residential and rural Texas
-              properties.
-            </p>
-          </div>
-          <div className="grid gap-2 text-sm font-semibold text-dust/80 sm:text-right">
-            <a href={phoneHref} className="hover:text-sand">
-              {phoneNumber}
-            </a>
-            <a
-              href="mailto:anthonypmusetti@gmail.com"
-              className="hover:text-sand"
-            >
-              anthonypmusetti@gmail.com
-            </a>
-            <p>
-              Facebook / Instagram / Google Business Profile:
-              https://share.google/xonNRwSDCQln7fcCJ
-            </p>
-          </div>
-        </div>
+        <div className="flex flex-col gap-4">
+  <div className="flex items-center gap-4">
+    <Image
+      src="/images/projects/LogoMark.svg"
+      alt="Right Size Land & Tractor logo"
+      width={70}
+      height={70}
+      className="h-14 w-auto"
+    />
+
+    <div>
+      <p className="font-display text-2xl font-black uppercase">
+        Right Size Land & Tractor
+      </p>
+
+      <p className="mt-1 text-sm font-semibold text-dust/70">
+        Owner-operated tractor services for residential and rural Texas
+        properties.
+      </p>
+    </div>
+  </div>
+</div>
       </footer>
     </main>
   );
