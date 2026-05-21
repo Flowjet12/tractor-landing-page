@@ -22,7 +22,11 @@ import {
   Trees,
   Wrench,
 } from "./Icons";
+
 import ContactForm from "./ContactForm";
+
+const googleBusinessUrl = "https://g.page/r/Cf0r5mW8wU4HEBM/review";
+const facebookUrl = "https://www.facebook.com/rightsizelandandtractor";
 
 const phoneNumber = "(830) 302-6833";
 const phoneHref = "tel:+18303026833";
@@ -379,7 +383,7 @@ export default function LandingPage() {
       </section>
 
       {/* Services are written around the actual problems local property owners search for. */}
-      <section id="services" className="py-20 sm:py-28">
+      <section id="services" className="bg-dust py-20 sm:py-28">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl">
             <p className="font-bold uppercase tracking-[0.3em] text-rust">
@@ -452,7 +456,7 @@ export default function LandingPage() {
       </section>
 
       {/* Local relevance and city names support SEO for high-intent nearby searches. */}
-      <section id="service-area" className="bg-white py-20 sm:py-28">
+      <section id="service-area" className="bg-dust py-20 sm:py-28">
         <div className="mx-auto grid max-w-7xl gap-10 px-4 sm:px-6 lg:grid-cols-[1fr_.9fr] lg:px-8">
           <div>
             <p className="font-bold uppercase tracking-[0.3em] text-rust">
@@ -507,7 +511,7 @@ export default function LandingPage() {
         </div>
       </section>
 
-      <section className="bg-white py-20 sm:py-24">
+      <section className="bg-ink py-20 text-white sm:py-24">
         <div className="mx-auto grid max-w-7xl gap-10 px-4 sm:px-6 lg:grid-cols-2 lg:px-8">
           <div>
             <p className="font-bold uppercase tracking-[0.3em] text-rust">
@@ -545,7 +549,7 @@ export default function LandingPage() {
         </div>
       </section>
 
-      <section className="py-20 sm:py-24" id="transformations">
+      <section className="bg-dust py-20 sm:py-24" id="transformations">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <p className="font-bold uppercase tracking-[0.3em] text-rust">
             Project Transformation
@@ -583,7 +587,7 @@ export default function LandingPage() {
       </section>
 
       {/* Social proof uses concrete situations instead of vague praise. */}
-      <section className="py-20 sm:py-28">
+      <section className="bg-ink py-20 text-white sm:py-28">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl">
             <p className="font-bold uppercase tracking-[0.3em] text-rust">
@@ -627,7 +631,7 @@ export default function LandingPage() {
         </div>
       </section>
 
-      <section className="relative isolate overflow-hidden px-4 py-24 text-white sm:px-6 lg:px-8">
+      <section className="relative isolate overflow-hidden bg-dust px-4 py-24 text-ink sm:px-6 lg:px-8">
         <Image
           src="/images/projects/FinalImage.jpg"
           alt="Completed land improvement project"
@@ -670,7 +674,7 @@ export default function LandingPage() {
       </section>
 
       {/* Contact section captures quote requests while still prioritizing phone calls. */}
-      <section id="contact" className="bg-dust py-20 pb-32 sm:py-28">
+      <section id="contact" className="bg-ink py-20 pb-32 text-white sm:py-28">
         <div className="mx-auto grid max-w-7xl gap-10 px-4 sm:px-6 lg:grid-cols-[.85fr_1.15fr] lg:px-8">
           <div>
             <p className="font-bold uppercase tracking-[0.3em] text-rust">
@@ -720,30 +724,53 @@ export default function LandingPage() {
         </div>
       </section>
 
-      {/* Footer includes local-business basics and placeholders for future social profiles. */}
+      {/* Footer includes local-business basics and social profile links. */}
       <footer className="border-t border-white/10 bg-ink px-4 py-10 text-white sm:px-6 lg:px-8">
-        <div className="flex flex-col gap-4">
-  <div className="flex items-center gap-4">
-    <Image
-      src="/images/projects/LogoMark.svg"
-      alt="Right Size Land & Tractor logo"
-      width={70}
-      height={70}
-      className="h-14 w-auto"
-    />
+        <div className="flex flex-col gap-6">
+          <div className="flex items-center gap-4">
+            <Image
+              src="/images/projects/LogoMark.svg"
+              alt="Right Size Land & Tractor logo"
+              width={70}
+              height={70}
+              className="h-14 w-auto"
+            />
 
-    <div>
-      <p className="font-display text-2xl font-black uppercase">
-        Right Size Land & Tractor
-      </p>
+            <div>
+              <p className="font-display text-2xl font-black uppercase">
+                Right Size Land & Tractor
+              </p>
 
-      <p className="mt-1 text-sm font-semibold text-dust/70">
-        Owner-operated tractor services for residential and rural Texas
-        properties.
-      </p>
-    </div>
-  </div>
-</div>
+              <p className="mt-1 text-sm font-semibold text-dust/70">
+                Owner-operated tractor services for residential and rural Texas
+                properties.
+              </p>
+            </div>
+          </div>
+
+          <div className="flex items-center gap-3">
+            <a
+              href={googleBusinessUrl}
+              target="_blank"
+              rel="noreferrer"
+              aria-label="Google Business profile"
+              className="inline-flex items-center gap-2 rounded-full border border-white/20 px-4 py-2 text-sm font-semibold text-white transition hover:bg-white/10"
+            >
+              <span className="inline-flex h-5 w-5 items-center justify-center rounded-full bg-white text-ink font-black">G</span>
+              Google Business
+            </a>
+            <a
+              href={facebookUrl}
+              target="_blank"
+              rel="noreferrer"
+              aria-label="Facebook page"
+              className="inline-flex items-center gap-2 rounded-full border border-white/20 px-4 py-2 text-sm font-semibold text-white transition hover:bg-white/10"
+            >
+              <span className="inline-flex h-5 w-5 items-center justify-center rounded-full bg-[#1877F2] text-white font-black">f</span>
+              Facebook
+            </a>
+          </div>
+        </div>
       </footer>
     </main>
   );
