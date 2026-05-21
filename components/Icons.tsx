@@ -58,6 +58,15 @@ const paths: Record<string, string[]> = {
     "M14.7 6.3a4 4 0 0 0-5 5L3 18l3 3 6.7-6.7a4 4 0 0 0 5-5l-2.8 2.8-2.1-2.1 2.8-2.8z",
   ],
   Send: ["M22 2L11 13", "M22 2l-7 20-4-9-9-4 20-7z"],
+  Facebook: [
+    "M14 8h3V4h-3c-3 0-5 2-5 5v3H6v4h3v4h4v-4h3l1-4h-4V9c0-.7.3-1 1-1z",
+  ],
+  Google: [
+    "M21 12.2c0-.7-.1-1.2-.2-1.8H12v3.5h5.1c-.2 1.2-.9 2.2-2 2.9v2.4h3.2c1.8-1.6 2.7-4 2.7-7z",
+    "M12 21c2.4 0 4.4-.8 5.9-2.2l-3.2-2.4c-.9.6-1.9 1-2.7 1-2.1 0-3.9-1.4-4.5-3.4H4.2v2.5C5.7 19.2 8.6 21 12 21z",
+    "M7.5 14c-.2-.6-.3-1.2-.3-2s.1-1.4.3-2V7.5H4.2A9 9 0 0 0 3 12c0 1.4.3 2.8 1.2 4l3.3-2z",
+    "M12 6.6c1.3 0 2.5.5 3.4 1.3l2.6-2.6C16.4 3.8 14.4 3 12 3 8.6 3 5.7 4.8 4.2 7.5l3.3 2.5C8.1 8 9.9 6.6 12 6.6z",
+  ],
 };
 
 function createIcon(name: keyof typeof paths, fill = false) {
@@ -101,3 +110,5 @@ export const Tractor = createIcon("Tractor");
 export const Trees = createIcon("Trees");
 export const Wrench = createIcon("Wrench");
 export const Send = createIcon("Send");
+export const Facebook = createIcon("Facebook");
+export const Google = createIcon("Google");
