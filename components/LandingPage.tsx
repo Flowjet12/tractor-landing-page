@@ -177,6 +177,14 @@ export default function LandingPage() {
               className="h-9 w-auto rounded"
               priority
             />
+            <span className="block">
+              <span className="block font-display text-base font-black uppercase tracking-wide text-white sm:text-xl">
+                Right Size Land & Tractor
+            </span>
+            <span className="hidden text-xs font-semibold uppercase tracking-[0.22em] text-sand sm:block">
+              Owner Operated
+            </span>
+  </span>
           </a>
 
           <nav
