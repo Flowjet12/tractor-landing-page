@@ -22,7 +22,11 @@ import {
   Trees,
   Wrench,
 } from "./Icons";
+
 import ContactForm from "./ContactForm";
+
+const googleBusinessUrl = "https://g.page/r/Cf0r5mW8wU4HEBM/review";
+const facebookUrl = "https://www.facebook.com/rightsizelandandtractor";
 
 const phoneNumber = "(830) 302-6833";
 const phoneHref = "tel:+18303026833";
@@ -379,7 +383,7 @@ export default function LandingPage() {
       </section>
 
       {/* Services are written around the actual problems local property owners search for. */}
-      <section id="services" className="py-20 sm:py-28">
+      <section id="services" className="bg-dust py-20 sm:py-28">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl">
             <p className="font-bold uppercase tracking-[0.3em] text-rust">
@@ -388,7 +392,7 @@ export default function LandingPage() {
             <h2 className="mt-3 font-display text-4xl font-black uppercase leading-tight text-ink sm:text-5xl">
               From overgrown to usable
             </h2>
-            <p className="mt-5 text-lg leading-8 text-steel">
+            <p className="mt-5 text-lg leading-8 text-dust/[0.88]">
               Whether you know exactly what you want or just know the property
               is getting away from you, we can help plan the practical way to
               get it done.
@@ -418,7 +422,7 @@ export default function LandingPage() {
       </section>
 
       {/* Comparison section positions the business between DIY frustration and big-contractor minimums. */}
-      <section id="why-us" className="bg-ink py-20 text-white sm:py-28">
+      <section id="why-us" className="bg-cedar py-20 text-white sm:py-28">
         <div className="mx-auto grid max-w-7xl gap-10 px-4 sm:px-6 lg:grid-cols-[.95fr_1.05fr] lg:px-8">
           <div>
             <p className="font-bold uppercase tracking-[0.3em] text-sand">
@@ -452,7 +456,7 @@ export default function LandingPage() {
       </section>
 
       {/* Local relevance and city names support SEO for high-intent nearby searches. */}
-      <section id="service-area" className="bg-white py-20 sm:py-28">
+      <section id="service-area" className="bg-dust py-20 sm:py-28">
         <div className="mx-auto grid max-w-7xl gap-10 px-4 sm:px-6 lg:grid-cols-[1fr_.9fr] lg:px-8">
           <div>
             <p className="font-bold uppercase tracking-[0.3em] text-rust">
@@ -507,16 +511,16 @@ export default function LandingPage() {
         </div>
       </section>
 
-      <section className="bg-white py-20 sm:py-24">
+      <section className="bg-cedar py-20 text-white sm:py-24">
         <div className="mx-auto grid max-w-7xl gap-10 px-4 sm:px-6 lg:grid-cols-2 lg:px-8">
           <div>
             <p className="font-bold uppercase tracking-[0.3em] text-rust">
               Owner-operated promise
             </p>
-            <h2 className="mt-3 font-display text-4xl font-black uppercase leading-tight text-ink sm:text-5xl">
+            <h2 className="mt-3 font-display text-4xl font-black uppercase leading-tight text-white sm:text-5xl">
               You hire the owner, not a revolving crew
             </h2>
-            <p className="mt-5 text-lg leading-8 text-steel">
+            <p className="mt-5 text-lg leading-8 text-dust/[0.88]">
               Texas acreage projects are personal. You need someone who treats
               your land like it matters, shows up when promised, and follows
               through without excuses.
@@ -525,14 +529,14 @@ export default function LandingPage() {
               {ownerBenefits.map((b) => (
                 <div
                   key={b}
-                  className="rounded-xl border border-sand/70 bg-dust px-4 py-3 font-semibold text-charcoal"
+                  className="rounded-xl border border-sand/40 bg-white/10 px-4 py-3 font-semibold text-dust"
                 >
                   {b}
                 </div>
               ))}
             </div>
           </div>
-          <div className="rounded-3xl bg-ink p-8 text-dust shadow-rugged">
+          <div className="rounded-3xl bg-ink/40 p-8 text-dust shadow-rugged">
             <h3 className="font-display text-3xl font-black uppercase text-white">
               Built for Texas acreage owners
             </h3>
@@ -545,7 +549,7 @@ export default function LandingPage() {
         </div>
       </section>
 
-      <section className="py-20 sm:py-24" id="transformations">
+      <section className="bg-dust py-20 sm:py-24" id="transformations">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <p className="font-bold uppercase tracking-[0.3em] text-rust">
             Project Transformation
@@ -583,7 +587,7 @@ export default function LandingPage() {
       </section>
 
       {/* Social proof uses concrete situations instead of vague praise. */}
-      <section className="py-20 sm:py-28">
+      <section className="bg-cedar py-20 text-white sm:py-28">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl">
             <p className="font-bold uppercase tracking-[0.3em] text-rust">
@@ -627,7 +631,7 @@ export default function LandingPage() {
         </div>
       </section>
 
-      <section className="relative isolate overflow-hidden px-4 py-24 text-white sm:px-6 lg:px-8">
+      <section className="relative isolate overflow-hidden bg-dust px-4 py-24 text-ink sm:px-6 lg:px-8">
         <Image
           src="/images/projects/FinalImage.jpg"
           alt="Completed land improvement project"
@@ -670,7 +674,7 @@ export default function LandingPage() {
       </section>
 
       {/* Contact section captures quote requests while still prioritizing phone calls. */}
-      <section id="contact" className="bg-dust py-20 pb-32 sm:py-28">
+      <section id="contact" className="bg-cedar py-20 pb-32 text-white sm:py-28">
         <div className="mx-auto grid max-w-7xl gap-10 px-4 sm:px-6 lg:grid-cols-[.85fr_1.15fr] lg:px-8">
           <div>
             <p className="font-bold uppercase tracking-[0.3em] text-rust">
@@ -679,7 +683,7 @@ export default function LandingPage() {
             <h2 className="mt-3 font-display text-4xl font-black uppercase leading-tight sm:text-5xl">
               Tell us what needs doing
             </h2>
-            <p className="mt-5 text-lg leading-8 text-steel">
+            <p className="mt-5 text-lg leading-8 text-dust/[0.88]">
               Photos help. Measurements help. But if all you know is “this spot
               is a mess,” that is enough to start the conversation.
             </p>
@@ -720,30 +724,53 @@ export default function LandingPage() {
         </div>
       </section>
 
-      {/* Footer includes local-business basics and placeholders for future social profiles. */}
+      {/* Footer includes local-business basics and social profile links. */}
       <footer className="border-t border-white/10 bg-ink px-4 py-10 text-white sm:px-6 lg:px-8">
-        <div className="flex flex-col gap-4">
-  <div className="flex items-center gap-4">
-    <Image
-      src="/images/projects/LogoMark.svg"
-      alt="Right Size Land & Tractor logo"
-      width={70}
-      height={70}
-      className="h-14 w-auto"
-    />
+        <div className="flex flex-col gap-6">
+          <div className="flex items-center gap-4">
+            <Image
+              src="/images/projects/LogoMark.svg"
+              alt="Right Size Land & Tractor logo"
+              width={70}
+              height={70}
+              className="h-14 w-auto"
+            />
 
-    <div>
-      <p className="font-display text-2xl font-black uppercase">
-        Right Size Land & Tractor
-      </p>
+            <div>
+              <p className="font-display text-2xl font-black uppercase">
+                Right Size Land & Tractor
+              </p>
 
-      <p className="mt-1 text-sm font-semibold text-dust/70">
-        Owner-operated tractor services for residential and rural Texas
-        properties.
-      </p>
-    </div>
-  </div>
-</div>
+              <p className="mt-1 text-sm font-semibold text-dust/70">
+                Owner-operated tractor services for residential and rural Texas
+                properties.
+              </p>
+            </div>
+          </div>
+
+          <div className="flex items-center gap-3">
+            <a
+              href={googleBusinessUrl}
+              target="_blank"
+              rel="noreferrer"
+              aria-label="Google Business profile"
+              className="inline-flex items-center gap-2 rounded-full border border-white/20 px-4 py-2 text-sm font-semibold text-white transition hover:bg-white/10"
+            >
+              <span className="inline-flex h-5 w-5 items-center justify-center rounded-full bg-white text-ink font-black">G</span>
+              Google Business
+            </a>
+            <a
+              href={facebookUrl}
+              target="_blank"
+              rel="noreferrer"
+              aria-label="Facebook page"
+              className="inline-flex items-center gap-2 rounded-full border border-white/20 px-4 py-2 text-sm font-semibold text-white transition hover:bg-white/10"
+            >
+              <span className="inline-flex h-5 w-5 items-center justify-center rounded-full bg-[#1877F2] text-white font-black">f</span>
+              Facebook
+            </a>
+          </div>
+        </div>
       </footer>
     </main>
   );
