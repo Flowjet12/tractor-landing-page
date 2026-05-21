@@ -1,4 +1,6 @@
 import Image from "next/image";
+
+
 import {
   ArrowRight,
   BadgeCheck,
@@ -28,6 +30,7 @@ const phoneHref = "tel:+18303026833";
 const navLinks = [
   { href: "#services", label: "Services" },
   { href: "#why-us", label: "Why Us" },
+  { href: "#projects", label: "Projects" },
   { href: "#service-area", label: "Service Area" },
   { href: "#contact", label: "Get Quote" },
 ];
@@ -99,6 +102,24 @@ const testimonials = [
   },
 ];
 
+const projectCards = [
+  {
+    title: "Cedar & Brush Reclaim",
+    before: "Overgrown fence line",
+    after: "Clean access for maintenance",
+  },
+  {
+    title: "Washed-Out Driveway",
+    before: "Ruts and standing water",
+    after: "Re-crowned gravel surface",
+  },
+  {
+    title: "Shop Pad Prep",
+    before: "Uneven native ground",
+    after: "Ready for base material",
+  },
+];
+
 export default function LandingPage() {
   const jsonLd = {
     "@context": "https://schema.org",
@@ -156,9 +177,6 @@ export default function LandingPage() {
               className="h-9 w-auto rounded"
               priority
             />
-            <span className="font-display text-sm font-black uppercase tracking-wide text-dust sm:text-xl">
-              Right Size Land & Tractor
-            </span>
           </a>
 
           <nav
@@ -481,7 +499,7 @@ export default function LandingPage() {
         </div>
       </section>
 
-      <section className="bg-dust py-20 sm:py-24">
+      <section className="bg-white py-20 sm:py-24">
         <div className="mx-auto grid max-w-7xl gap-10 px-4 sm:px-6 lg:grid-cols-2 lg:px-8">
           <div>
             <p className="font-bold uppercase tracking-[0.3em] text-rust">
@@ -698,18 +716,9 @@ export default function LandingPage() {
       <footer className="border-t border-white/10 bg-ink px-4 py-10 text-white sm:px-6 lg:px-8">
         <div className="mx-auto flex max-w-7xl flex-col gap-8 md:flex-row md:items-center md:justify-between">
           <div>
-            <div className="flex items-center gap-3">
-              <Image
-                src="/images/projects/LogoMark.svg"
-                alt="Right Size Land & Tractor logo"
-                width={48}
-                height={48}
-                className="h-12 w-12 rounded"
-              />
-              <p className="font-display text-2xl font-black uppercase">
-                Right Size Land & Tractor
-              </p>
-            </div>
+            <p className="font-display text-2xl font-black uppercase">
+              Right Size Land & Tractor
+            </p>
             <p className="mt-2 text-sm font-semibold text-dust/70">
               Owner-operated tractor services for residential and rural Texas
               properties.
@@ -725,18 +734,10 @@ export default function LandingPage() {
             >
               anthonypmusetti@gmail.com
             </a>
-            <div className="inline-flex items-center gap-3 sm:justify-end">
-              <span>Facebook / Instagram / Google</span>
-              <a
-                href="https://share.google/xonNRwSDCQln7fcCJ"
-                target="_blank"
-                rel="noreferrer"
-                aria-label="Google Business Profile"
-                className="inline-flex h-8 w-8 items-center justify-center rounded-full bg-white text-ink transition hover:bg-sand"
-              >
-                <span className="text-sm font-black">G</span>
-              </a>
-            </div>
+            <p>
+              Facebook / Instagram / Google Business Profile:
+              https://share.google/xonNRwSDCQln7fcCJ
+            </p>
           </div>
         </div>
       </footer>
