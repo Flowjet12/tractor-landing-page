@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 184 184" role="img" aria-label="Right Size logo">
+  <rect width="184" height="184" fill="#f75a00"/>
+  <text x="40" y="146" fill="#f3f0ea" font-size="150" font-family="Georgia, 'Times New Roman', serif" font-weight="700">R</text>
+  <g transform="translate(93,84)">
+    <circle r="20" fill="none" stroke="#f75a00" stroke-width="7"/>
+    <circle r="14" fill="none" stroke="#f3f0ea" stroke-width="8" stroke-dasharray="4 3"/>
+    <circle r="5" fill="#f75a00" stroke="#f3f0ea" stroke-width="4"/>
+  </g>
+</svg>
