@@ -392,7 +392,7 @@ export default function LandingPage() {
             <h2 className="mt-3 font-display text-4xl font-black uppercase leading-tight text-ink sm:text-5xl">
               From overgrown to usable
             </h2>
-            <p className="mt-5 text-lg leading-8 text-steel">
+            <p className="mt-5 text-lg leading-8 text-dust/[0.88]">
               Whether you know exactly what you want or just know the property
               is getting away from you, we can help plan the practical way to
               get it done.
@@ -422,7 +422,7 @@ export default function LandingPage() {
       </section>
 
       {/* Comparison section positions the business between DIY frustration and big-contractor minimums. */}
-      <section id="why-us" className="bg-ink py-20 text-white sm:py-28">
+      <section id="why-us" className="bg-cedar py-20 text-white sm:py-28">
         <div className="mx-auto grid max-w-7xl gap-10 px-4 sm:px-6 lg:grid-cols-[.95fr_1.05fr] lg:px-8">
           <div>
             <p className="font-bold uppercase tracking-[0.3em] text-sand">
@@ -511,16 +511,16 @@ export default function LandingPage() {
         </div>
       </section>
 
-      <section className="bg-ink py-20 text-white sm:py-24">
+      <section className="bg-cedar py-20 text-white sm:py-24">
         <div className="mx-auto grid max-w-7xl gap-10 px-4 sm:px-6 lg:grid-cols-2 lg:px-8">
           <div>
             <p className="font-bold uppercase tracking-[0.3em] text-rust">
               Owner-operated promise
             </p>
-            <h2 className="mt-3 font-display text-4xl font-black uppercase leading-tight text-ink sm:text-5xl">
+            <h2 className="mt-3 font-display text-4xl font-black uppercase leading-tight text-white sm:text-5xl">
               You hire the owner, not a revolving crew
             </h2>
-            <p className="mt-5 text-lg leading-8 text-steel">
+            <p className="mt-5 text-lg leading-8 text-dust/[0.88]">
               Texas acreage projects are personal. You need someone who treats
               your land like it matters, shows up when promised, and follows
               through without excuses.
@@ -529,14 +529,14 @@ export default function LandingPage() {
               {ownerBenefits.map((b) => (
                 <div
                   key={b}
-                  className="rounded-xl border border-sand/70 bg-dust px-4 py-3 font-semibold text-charcoal"
+                  className="rounded-xl border border-sand/40 bg-white/10 px-4 py-3 font-semibold text-dust"
                 >
                   {b}
                 </div>
               ))}
             </div>
           </div>
-          <div className="rounded-3xl bg-ink p-8 text-dust shadow-rugged">
+          <div className="rounded-3xl bg-ink/40 p-8 text-dust shadow-rugged">
             <h3 className="font-display text-3xl font-black uppercase text-white">
               Built for Texas acreage owners
             </h3>
@@ -587,7 +587,7 @@ export default function LandingPage() {
       </section>
 
       {/* Social proof uses concrete situations instead of vague praise. */}
-      <section className="bg-ink py-20 text-white sm:py-28">
+      <section className="bg-cedar py-20 text-white sm:py-28">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl">
             <p className="font-bold uppercase tracking-[0.3em] text-rust">
@@ -674,7 +674,7 @@ export default function LandingPage() {
       </section>
 
       {/* Contact section captures quote requests while still prioritizing phone calls. */}
-      <section id="contact" className="bg-ink py-20 pb-32 text-white sm:py-28">
+      <section id="contact" className="bg-cedar py-20 pb-32 text-white sm:py-28">
         <div className="mx-auto grid max-w-7xl gap-10 px-4 sm:px-6 lg:grid-cols-[.85fr_1.15fr] lg:px-8">
           <div>
             <p className="font-bold uppercase tracking-[0.3em] text-rust">
@@ -683,7 +683,7 @@ export default function LandingPage() {
             <h2 className="mt-3 font-display text-4xl font-black uppercase leading-tight sm:text-5xl">
               Tell us what needs doing
             </h2>
-            <p className="mt-5 text-lg leading-8 text-steel">
+            <p className="mt-5 text-lg leading-8 text-dust/[0.88]">
               Photos help. Measurements help. But if all you know is “this spot
               is a mess,” that is enough to start the conversation.
             </p>
