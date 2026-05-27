@@ -1,6 +1,5 @@
 import Image from "next/image";
 
-
 import {
   ArrowRight,
   BadgeCheck,
@@ -154,6 +153,10 @@ export default function LandingPage() {
     "No big-contractor overhead markup",
   ];
 
+  const Fade = ({ from, to }: { from: string; to: string }) => (
+    <div className={`h-16 bg-gradient-to-b ${from} ${to}`} aria-hidden="true" />
+  );
+
   return (
     <main className="overflow-hidden bg-dust text-ink">
       <script
@@ -161,7 +164,6 @@ export default function LandingPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
 
-      {/* Sticky navigation keeps phone and quote CTAs accessible throughout the buying journey. */}
       <header className="fixed inset-x-0 top-0 z-50 border-b border-white/10 bg-ink/[0.92] text-white shadow-lg backdrop-blur-xl">
         <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-3 sm:px-6 lg:px-8">
           <a
@@ -177,14 +179,15 @@ export default function LandingPage() {
               className="h-9 w-auto rounded"
               priority
             />
+
             <span className="block">
               <span className="block font-display text-base font-black uppercase tracking-wide text-white sm:text-xl">
                 Right Size Land & Tractor
+              </span>
+              <span className="hidden text-xs font-semibold uppercase tracking-[0.22em] text-sand sm:block">
+                Owner Operated
+              </span>
             </span>
-            <span className="hidden text-xs font-semibold uppercase tracking-[0.22em] text-sand sm:block">
-              Owner Operated
-            </span>
-  </span>
           </a>
 
           <nav
@@ -210,6 +213,7 @@ export default function LandingPage() {
               <Phone className="h-4 w-4" aria-hidden="true" />
               {phoneNumber}
             </a>
+
             <a
               href="#contact"
               className="rounded-full bg-rust px-5 py-2.5 text-sm font-black uppercase tracking-wide text-white shadow-lg transition hover:bg-mesquite"
@@ -228,7 +232,6 @@ export default function LandingPage() {
         </div>
       </header>
 
-      {/* Mobile direct-response CTA: phone remains the easiest conversion path. */}
       <a
         href={phoneHref}
         className="fixed inset-x-4 bottom-4 z-50 flex items-center justify-center gap-3 rounded-2xl bg-rust px-5 py-4 text-base font-black uppercase tracking-wide text-white shadow-rugged sm:hidden"
@@ -237,7 +240,6 @@ export default function LandingPage() {
         Tap to Call {phoneNumber}
       </a>
 
-      {/* Hero section leads with outcome, credibility, and two clear conversion actions. */}
       <section
         id="top"
         className="relative isolate min-h-screen bg-field pt-28 text-white sm:pt-32"
@@ -250,6 +252,7 @@ export default function LandingPage() {
           priority
           sizes="100vw"
         />
+
         <div
           className="absolute inset-0 -z-10 bg-gradient-to-r from-ink/90 via-ink/75 to-ink/50"
           aria-hidden="true"
@@ -259,7 +262,7 @@ export default function LandingPage() {
           aria-hidden="true"
         />
         <div
-          className="absolute inset-x-0 bottom-0 -z-10 h-52 bg-gradient-to-t from-dust to-transparent"
+          className="absolute inset-x-0 bottom-0 -z-10 h-52 bg-gradient-to-t from-ink to-transparent"
           aria-hidden="true"
         />
 
@@ -273,6 +276,7 @@ export default function LandingPage() {
             <h1 className="max-w-4xl font-display text-5xl font-black uppercase leading-[0.95] tracking-tight text-white sm:text-6xl lg:text-7xl">
               Get Your Land Back Without Losing Your Weekend
             </h1>
+
             <p className="mt-6 max-w-2xl text-lg leading-8 text-dust/[0.88] sm:text-xl">
               Brush clearing, driveway grading, pad prep, dirt work, drainage
               fixes, and small acreage cleanup for Texas homeowners, ranch
@@ -287,6 +291,7 @@ export default function LandingPage() {
                 <Phone className="h-5 w-5" aria-hidden="true" />
                 Call {phoneNumber}
               </a>
+
               <a
                 href="#contact"
                 className="inline-flex items-center justify-center gap-3 rounded-xl border border-sand/50 bg-white/10 px-7 py-4 text-lg font-black uppercase tracking-wide text-white backdrop-blur transition hover:-translate-y-0.5 hover:bg-white/15"
@@ -327,6 +332,7 @@ export default function LandingPage() {
                   className="absolute inset-0 texture-overlay opacity-80"
                   aria-hidden="true"
                 />
+
                 <div className="relative">
                   <div className="flex items-center justify-between border-b border-white/15 pb-5">
                     <div>
@@ -337,6 +343,7 @@ export default function LandingPage() {
                         Built for real ranch work
                       </h2>
                     </div>
+
                     <Tractor
                       className="h-12 w-12 text-rust"
                       aria-hidden="true"
@@ -378,8 +385,9 @@ export default function LandingPage() {
         </div>
       </section>
 
-      {/* Services are written around the actual problems local property owners search for. */}
-      <section id="services" className="py-20 sm:py-28">
+      <Fade from="from-ink" to="to-dust" />
+
+      <section id="services" className="bg-dust py-20 sm:py-28">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl">
             <p className="font-bold uppercase tracking-[0.3em] text-rust">
@@ -398,6 +406,7 @@ export default function LandingPage() {
           <div className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
             {services.map((service) => {
               const Icon = service.icon;
+
               return (
                 <article
                   key={service.title}
@@ -406,9 +415,11 @@ export default function LandingPage() {
                   <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-cedar text-sand transition group-hover:bg-rust group-hover:text-white">
                     <Icon className="h-6 w-6" aria-hidden="true" />
                   </div>
+
                   <h3 className="mt-5 font-display text-2xl font-bold uppercase text-ink">
                     {service.title}
                   </h3>
+
                   <p className="mt-3 leading-7 text-steel">{service.text}</p>
                 </article>
               );
@@ -417,7 +428,8 @@ export default function LandingPage() {
         </div>
       </section>
 
-      {/* Comparison section positions the business between DIY frustration and big-contractor minimums. */}
+      <Fade from="from-dust" to="to-ink" />
+
       <section id="why-us" className="bg-ink py-20 text-white sm:py-28">
         <div className="mx-auto grid max-w-7xl gap-10 px-4 sm:px-6 lg:grid-cols-[.95fr_1.05fr] lg:px-8">
           <div>
@@ -451,14 +463,15 @@ export default function LandingPage() {
         </div>
       </section>
 
-      {/* Local relevance and city names support SEO for high-intent nearby searches. */}
-      <section id="service-area" className="bg-white py-20 sm:py-28">
+      <Fade from="from-ink" to="to-dust" />
+
+      <section id="service-area" className="bg-dust py-20 sm:py-28">
         <div className="mx-auto grid max-w-7xl gap-10 px-4 sm:px-6 lg:grid-cols-[1fr_.9fr] lg:px-8">
           <div>
             <p className="font-bold uppercase tracking-[0.3em] text-rust">
               Service area
             </p>
-            <h2 className="mt-3 font-display text-4xl font-black uppercase leading-tight sm:text-5xl">
+            <h2 className="mt-3 font-display text-4xl font-black uppercase leading-tight text-ink sm:text-5xl">
               Serving the Texas Hill Country and greater San Antonio area
             </h2>
             <p className="mt-5 text-lg leading-8 text-steel">
@@ -466,6 +479,7 @@ export default function LandingPage() {
               available for homeowners, ranch owners, and small acreage
               customers in nearby Hill Country communities.
             </p>
+
             <div className="mt-8 flex flex-wrap gap-3">
               {[
                 "San Antonio",
@@ -479,13 +493,14 @@ export default function LandingPage() {
               ].map((city) => (
                 <span
                   key={city}
-                  className="rounded-full border border-sand bg-dust px-4 py-2 text-sm font-bold text-charcoal"
+                  className="rounded-full border border-sand bg-white px-4 py-2 text-sm font-bold text-charcoal"
                 >
                   {city}, TX
                 </span>
               ))}
             </div>
           </div>
+
           <div className="rounded-[2rem] bg-cedar p-8 text-white shadow-rugged">
             <MapPin className="h-10 w-10 text-sand" aria-hidden="true" />
             <h3 className="mt-5 font-display text-3xl font-black uppercase">
@@ -496,6 +511,7 @@ export default function LandingPage() {
               direct about travel, timing, and the most cost-effective way to
               tackle it.
             </p>
+
             <a
               href={phoneHref}
               className="mt-6 inline-flex items-center gap-2 rounded-xl bg-rust px-6 py-4 font-black uppercase tracking-wide text-white transition hover:bg-mesquite"
@@ -507,32 +523,36 @@ export default function LandingPage() {
         </div>
       </section>
 
-      <section className="bg-white py-20 sm:py-24">
+      <Fade from="from-dust" to="to-ink" />
+
+      <section className="bg-ink py-20 text-white sm:py-24">
         <div className="mx-auto grid max-w-7xl gap-10 px-4 sm:px-6 lg:grid-cols-2 lg:px-8">
           <div>
-            <p className="font-bold uppercase tracking-[0.3em] text-rust">
+            <p className="font-bold uppercase tracking-[0.3em] text-sand">
               Owner-operated promise
             </p>
-            <h2 className="mt-3 font-display text-4xl font-black uppercase leading-tight text-ink sm:text-5xl">
+            <h2 className="mt-3 font-display text-4xl font-black uppercase leading-tight text-white sm:text-5xl">
               You hire the owner, not a revolving crew
             </h2>
-            <p className="mt-5 text-lg leading-8 text-steel">
+            <p className="mt-5 text-lg leading-8 text-dust/80">
               Texas acreage projects are personal. You need someone who treats
               your land like it matters, shows up when promised, and follows
               through without excuses.
             </p>
+
             <div className="mt-6 grid gap-3">
-              {ownerBenefits.map((b) => (
+              {ownerBenefits.map((benefit) => (
                 <div
-                  key={b}
-                  className="rounded-xl border border-sand/70 bg-dust px-4 py-3 font-semibold text-charcoal"
+                  key={benefit}
+                  className="rounded-xl border border-white/10 bg-white/10 px-4 py-3 font-semibold text-dust"
                 >
-                  {b}
+                  {benefit}
                 </div>
               ))}
             </div>
           </div>
-          <div className="rounded-3xl bg-ink p-8 text-dust shadow-rugged">
+
+          <div className="rounded-3xl bg-white/10 p-8 text-dust shadow-rugged">
             <h3 className="font-display text-3xl font-black uppercase text-white">
               Built for Texas acreage owners
             </h3>
@@ -545,21 +565,24 @@ export default function LandingPage() {
         </div>
       </section>
 
-      <section className="py-20 sm:py-24" id="transformations">
+      <Fade from="from-ink" to="to-dust" />
+
+      <section className="bg-dust py-20 sm:py-24" id="transformations">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <p className="font-bold uppercase tracking-[0.3em] text-rust">
             Project Transformation
           </p>
-          <h2 className="mt-3 font-display text-4xl font-black uppercase sm:text-5xl">
+          <h2 className="mt-3 font-display text-4xl font-black uppercase text-ink sm:text-5xl">
             Raw ground to finished shed pad
           </h2>
+
           <div className="mt-10 grid gap-6 md:grid-cols-2 lg:grid-cols-4">
             {[
               ["ShedPadBefore.jpg", "Before: rough native ground"],
               ["ShedPadDuring1.jpg", "During: clearing and first pass"],
               ["ShedPadDuring2.jpg", "During: shaping and compaction"],
               ["ShedPadDone.jpg", "Done: finished shed pad ready for build"],
-            ].map(([src, cap], i) => (
+            ].map(([src, caption], index) => (
               <figure
                 key={src}
                 className="group overflow-hidden rounded-2xl border border-sand/70 bg-white shadow-card"
@@ -567,14 +590,15 @@ export default function LandingPage() {
                 <div className="relative aspect-[4/5]">
                   <Image
                     src={`/images/projects/${src}`}
-                    alt={cap}
+                    alt={caption}
                     fill
                     className="object-cover transition duration-500 group-hover:scale-105"
                     sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 25vw"
                   />
                 </div>
+
                 <figcaption className="p-4 text-sm font-semibold text-charcoal">
-                  Step {i + 1}: {cap}
+                  Step {index + 1}: {caption}
                 </figcaption>
               </figure>
             ))}
@@ -582,27 +606,30 @@ export default function LandingPage() {
         </div>
       </section>
 
-      {/* Social proof uses concrete situations instead of vague praise. */}
-      <section className="py-20 sm:py-28">
+      <Fade from="from-dust" to="to-white" />
+
+      <section className="bg-white py-20 sm:py-28">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl">
             <p className="font-bold uppercase tracking-[0.3em] text-rust">
               What customers say
             </p>
-            <h2 className="mt-3 font-display text-4xl font-black uppercase leading-tight sm:text-5xl">
+            <h2 className="mt-3 font-display text-4xl font-black uppercase leading-tight text-ink sm:text-5xl">
               Straight work. Straight talk.
             </h2>
           </div>
+
           <div className="mt-12 grid gap-6 lg:grid-cols-3">
             {testimonials.map((testimonial) => (
               <figure
                 key={testimonial.name}
-                className="rounded-3xl border border-sand/70 bg-white p-7 shadow-card"
+                className="rounded-3xl border border-sand/70 bg-dust p-7 shadow-card"
               >
                 <Quote className="h-8 w-8 text-rust" aria-hidden="true" />
                 <blockquote className="mt-5 text-lg font-semibold leading-8 text-charcoal">
                   “{testimonial.quote}”
                 </blockquote>
+
                 <figcaption className="mt-6 border-t border-sand/60 pt-5">
                   <div
                     className="flex gap-1 text-rust"
@@ -616,6 +643,7 @@ export default function LandingPage() {
                       />
                     ))}
                   </div>
+
                   <p className="mt-3 font-black text-ink">{testimonial.name}</p>
                   <p className="text-sm font-semibold text-steel">
                     {testimonial.place}
@@ -635,7 +663,9 @@ export default function LandingPage() {
           className="-z-20 object-cover"
           sizes="100vw"
         />
+
         <div className="absolute inset-0 -z-10 bg-ink/55" aria-hidden="true" />
+
         <div className="mx-auto max-w-7xl">
           <div className="max-w-4xl rounded-[2rem] border border-white/20 bg-ink/70 p-8 shadow-rugged backdrop-blur sm:p-12">
             <p className="font-bold uppercase tracking-[0.3em] text-sand">
@@ -649,6 +679,7 @@ export default function LandingPage() {
               respects your property. One call can turn “someday” into scheduled
               work.
             </p>
+
             <div className="mt-8 flex flex-col gap-3 sm:flex-row">
               <a
                 href={phoneHref}
@@ -657,6 +688,7 @@ export default function LandingPage() {
                 <Phone className="h-5 w-5" aria-hidden="true" />
                 Call Now
               </a>
+
               <a
                 href="#contact"
                 className="inline-flex items-center justify-center gap-3 rounded-xl border border-sand/50 px-7 py-4 text-lg font-black uppercase tracking-wide text-white transition hover:bg-white/10"
@@ -669,7 +701,8 @@ export default function LandingPage() {
         </div>
       </section>
 
-      {/* Contact section captures quote requests while still prioritizing phone calls. */}
+      <Fade from="from-ink" to="to-dust" />
+
       <section id="contact" className="bg-dust py-20 pb-32 sm:py-28">
         <div className="mx-auto grid max-w-7xl gap-10 px-4 sm:px-6 lg:grid-cols-[.85fr_1.15fr] lg:px-8">
           <div>
@@ -683,12 +716,14 @@ export default function LandingPage() {
               Photos help. Measurements help. But if all you know is “this spot
               is a mess,” that is enough to start the conversation.
             </p>
+
             <div className="mt-8 grid gap-4">
               <div className="flex gap-4 rounded-2xl bg-white p-5 shadow-card">
                 <Clock
                   className="h-7 w-7 shrink-0 text-rust"
                   aria-hidden="true"
                 />
+
                 <div>
                   <h3 className="font-display text-2xl font-bold uppercase">
                     Fast response
@@ -699,11 +734,13 @@ export default function LandingPage() {
                   </p>
                 </div>
               </div>
+
               <div className="flex gap-4 rounded-2xl bg-white p-5 shadow-card">
                 <Hammer
                   className="h-7 w-7 shrink-0 text-rust"
                   aria-hidden="true"
                 />
+
                 <div>
                   <h3 className="font-display text-2xl font-bold uppercase">
                     Practical advice
@@ -716,34 +753,73 @@ export default function LandingPage() {
               </div>
             </div>
           </div>
+
           <ContactForm />
         </div>
       </section>
 
-      {/* Footer includes local-business basics and placeholders for future social profiles. */}
       <footer className="border-t border-white/10 bg-ink px-4 py-10 text-white sm:px-6 lg:px-8">
-        <div className="flex flex-col gap-4">
-  <div className="flex items-center gap-4">
-    <Image
-      src="/images/projects/LogoMark.svg"
-      alt="Right Size Land & Tractor logo"
-      width={70}
-      height={70}
-      className="h-14 w-auto"
-    />
+        <div className="mx-auto flex max-w-7xl flex-col gap-8 md:flex-row md:items-center md:justify-between">
+          <div className="flex flex-col gap-4">
+            <div className="flex items-center gap-4">
+              <Image
+                src="/images/projects/LogoMark.svg"
+                alt="Right Size Land & Tractor logo"
+                width={70}
+                height={70}
+                className="h-14 w-auto"
+              />
 
-    <div>
-      <p className="font-display text-2xl font-black uppercase">
-        Right Size Land & Tractor
-      </p>
+              <div>
+                <p className="font-display text-2xl font-black uppercase">
+                  Right Size Land & Tractor
+                </p>
 
-      <p className="mt-1 text-sm font-semibold text-dust/70">
-        Owner-operated tractor services for residential and rural Texas
-        properties.
-      </p>
-    </div>
-  </div>
-</div>
+                <p className="mt-1 text-sm font-semibold text-dust/70">
+                  Owner-operated tractor services for residential and rural
+                  Texas properties.
+                </p>
+              </div>
+            </div>
+
+            <div className="flex gap-3">
+              <a
+                href="https://share.google/Wbva0jZYkZ5eRiiOL"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Google Business Profile"
+                className="rounded-full border border-sand/40 px-4 py-2 text-sm font-bold text-sand transition hover:bg-white/10"
+              >
+                Google
+              </a>
+
+              <a
+                href="https://www.facebook.com/profile.php?id=61575389984384"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Facebook Business Page"
+                className="rounded-full border border-sand/40 px-4 py-2 text-sm font-bold text-sand transition hover:bg-white/10"
+              >
+                Facebook
+              </a>
+            </div>
+          </div>
+
+          <div className="flex flex-col gap-3 text-sm font-semibold text-dust/80 md:text-right">
+            <a href={phoneHref} className="hover:text-sand">
+              {phoneNumber}
+            </a>
+
+            <a
+              href="mailto:anthonypmusetti@gmail.com"
+              className="hover:text-sand"
+            >
+              anthonypmusetti@gmail.com
+            </a>
+
+            <p>Boerne, TX & Surrounding Areas</p>
+          </div>
+        </div>
       </footer>
     </main>
   );
