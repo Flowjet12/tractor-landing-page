@@ -67,8 +67,8 @@ const services = [
   },
   {
     icon: Sprout,
-    title: "Large Lawn Maintenance",
-    text: "Reliable mowing and field maintenance for oversized yards, ranchettes, and properties standard crews avoid.",
+    title: "Homestead Maintenance",
+    text: "Reclaim overgrown South Texas acreage with ongoing brush control, mowing, trail clearing, and property maintenance that keeps your land accessible and usable year-round.",
   },
   {
     icon: Fence,
@@ -578,10 +578,10 @@ export default function LandingPage() {
 
           <div className="mt-10 grid gap-6 md:grid-cols-2 lg:grid-cols-4">
             {[
-              ["ShedPadBefore.jpg", "Before: rough native ground"],
-              ["ShedPadDuring1.jpg", "During: clearing and first pass"],
-              ["ShedPadDuring2.jpg", "During: shaping and compaction"],
-              ["ShedPadDone.jpg", "Done: finished shed pad ready for build"],
+              ["ShedPadBefore.jpg", "Rough native ground"],
+              ["ShedPadDuring1.jpg", "Clearing and initial leveling"],
+              ["ShedPadDuring2.jpg", "Material movement"],
+              ["ShedPadDone.jpg", "Finished level pad ready for shed delivery"],
             ].map(([src, caption], index) => (
               <figure
                 key={src}
