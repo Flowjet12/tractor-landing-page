@@ -65,7 +65,6 @@ const services = [
     title: "Drainage Improvement",
     text: "Address standing water, erosion, and poor flow with practical grading that respects your land and budget.",
   },
-  {
 ];
 
 const advantages = [
