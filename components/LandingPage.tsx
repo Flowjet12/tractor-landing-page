@@ -66,15 +66,6 @@ const services = [
     text: "Address standing water, erosion, and poor flow with practical grading that respects your land and budget.",
   },
   {
-    icon: Sprout,
-    title: "Homestead Maintenance",
-    text: "Reclaim overgrown South Texas acreage with ongoing brush control, mowing, trail clearing, and property maintenance that keeps your land accessible and usable year-round.",
-  },
-  {
-    icon: Fence,
-    title: "Small Acreage Improvement",
-    text: "Knock out the punch list: clean edges, clear access, reshape problem spots, and make the property easier to use.",
-  },
 ];
 
 const advantages = [
