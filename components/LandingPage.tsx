@@ -330,7 +330,7 @@ export default function LandingPage() {
                         Typical projects
                       </p>
                       <h2 className="mt-1 font-display text-3xl font-black uppercase">
-                        Built for real ranch work
+                        Built for your property
                       </h2>
                     </div>
 
