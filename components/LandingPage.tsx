@@ -217,7 +217,7 @@ export default function LandingPage() {
             className="rounded-full border border-sand/40 p-2 text-sand sm:hidden"
             aria-label="Open contact section"
           >
-            <Menu className="h-6 w-6" aria-hidden="true" />
+            Quote
           </a>
         </div>
       </header>
