@@ -334,10 +334,7 @@ export default function LandingPage() {
                       </h2>
                     </div>
 
-                    <Tractor
-                      className="h-12 w-12 text-rust"
-                      aria-hidden="true"
-                    />
+                    
                   </div>
 
                   <div className="mt-6 grid gap-4">
