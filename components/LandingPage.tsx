@@ -217,7 +217,7 @@ export default function LandingPage() {
             className="rounded-full border border-sand/40 p-2 text-sand sm:hidden"
             aria-label="Open contact section"
           >
-            Quote
+            Get Quote
           </a>
         </div>
       </header>
