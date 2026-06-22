@@ -31,9 +31,10 @@ const navLinks = [
   { href: "#services", label: "Services" },
   { href: "#why-us", label: "Why Us" },
   { href: "#who-we-serve", label: "Who We Serve" },
-  { href: "#plans", label: "Plans" },
+  { href: "#programs", label: "Programs" },
   { href: "#service-area", label: "Service Area" },
   { href: "#contact", label: "Assessment" },
+];
 ];
 
 const services = [
@@ -170,52 +171,73 @@ export default function LandingPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
 
-      <header className="fixed inset-x-0 top-0 z-50 border-b border-white/10 bg-ink/[0.92] text-white shadow-lg backdrop-blur-xl">
-        <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-3 sm:px-6 lg:px-8">
-          <a href="#top" className="flex items-center gap-3" aria-label="Right Size Equipment Services home">
-            <Image
-              src="/images/projects/LogoMark.svg"
-              alt="Right Size Equipment Services logo"
-              width={120}
-              height={34}
-              className="h-9 w-auto rounded"
-              priority
-            />
+<header className="fixed inset-x-0 top-0 z-50 border-b border-white/10 bg-ink/[0.94] text-white shadow-lg backdrop-blur-xl">
+  <div className="mx-auto flex max-w-7xl items-center justify-between gap-8 px-4 py-4 sm:px-6 lg:px-8">
+    <a
+      href="#top"
+      className="flex min-w-[360px] items-center gap-4"
+      aria-label="Right Size Land & Tractor home"
+    >
+      <Image
+        src="/images/projects/LogoMarkRed.png"
+        alt="Right Size Land & Tractor logo"
+        width={64}
+        height={64}
+        className="h-14 w-14 rounded-xl object-contain"
+        priority
+      />
 
-            <span className="block">
-              <span className="block font-display text-base font-black uppercase tracking-wide text-white sm:text-xl">
-                Right Size Equipment Services
-              </span>
-              <span className="hidden text-xs font-semibold uppercase tracking-[0.22em] text-sand sm:block">
-                Acreage Maintenance & Land Stewardship
-              </span>
-            </span>
-          </a>
+      <span className="block leading-none">
+        <span className="block font-display text-xl font-black uppercase tracking-wide text-white">
+          Right Size Land & Tractor
+        </span>
+        <span className="mt-2 block text-xs font-semibold uppercase tracking-[0.24em] text-sand">
+          Acreage Maintenance & Land Stewardship
+        </span>
+      </span>
+    </a>
 
-          <nav className="hidden items-center gap-7 text-sm font-bold uppercase tracking-wide text-dust/80 lg:flex" aria-label="Main navigation">
-            {navLinks.map((link) => (
-              <a key={link.href} href={link.href} className="transition hover:text-sand">
-                {link.label}
-              </a>
-            ))}
-          </nav>
+    <nav
+      className="hidden flex-1 items-center justify-center gap-8 whitespace-nowrap text-sm font-black uppercase tracking-wide text-dust/90 lg:flex"
+      aria-label="Main navigation"
+    >
+      {navLinks.map((link) => (
+        <a
+          key={link.href}
+          href={link.href}
+          className="transition hover:text-sand"
+        >
+          {link.label}
+        </a>
+      ))}
+    </nav>
 
-          <div className="hidden items-center gap-3 sm:flex">
-            <a href={phoneHref} className="inline-flex items-center gap-2 rounded-full border border-sand/40 px-4 py-2 text-sm font-black text-sand transition hover:bg-white/10">
-              <Phone className="h-4 w-4" aria-hidden="true" />
-              {phoneNumber}
-            </a>
+    <div className="hidden shrink-0 items-center gap-3 sm:flex">
+      <a
+        href={phoneHref}
+        className="inline-flex items-center gap-3 whitespace-nowrap rounded-full border border-sand/40 px-5 py-3 text-sm font-black text-sand transition hover:bg-white/10"
+      >
+        <Phone className="h-4 w-4" aria-hidden="true" />
+        {phoneNumber}
+      </a>
 
-            <a href="#contact" className={`rounded-full ${bgRed} px-5 py-2.5 text-sm font-black uppercase tracking-wide text-white shadow-lg transition ${hoverRed}`}>
-              Get Assessment
-            </a>
-          </div>
+      <a
+        href="#contact"
+        className="whitespace-nowrap rounded-full bg-[#C8102E] px-7 py-4 text-sm font-black uppercase tracking-wide text-white shadow-lg transition hover:bg-[#9f0d24]"
+      >
+        Get Assessment
+      </a>
+    </div>
 
-          <a href="#contact" className="rounded-full border border-sand/40 p-2 text-sand sm:hidden" aria-label="Open contact section">
-            Assessment
-          </a>
-        </div>
-      </header>
+    <a
+      href="#contact"
+      className="rounded-full border border-sand/40 px-4 py-2 text-sm font-black text-sand sm:hidden"
+      aria-label="Open contact section"
+    >
+      Assessment
+    </a>
+  </div>
+</header>
 
       <a href={phoneHref} className={`fixed inset-x-4 bottom-4 z-50 flex items-center justify-center gap-3 rounded-2xl ${bgRed} px-5 py-4 text-base font-black uppercase tracking-wide text-white shadow-rugged sm:hidden`}>
         <Phone className="h-5 w-5" aria-hidden="true" />
@@ -418,49 +440,105 @@ export default function LandingPage() {
           </div>
         </div>
       </section>
+<section id="programs" className="bg-white py-20 sm:py-28">
+  <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+    <div className="mx-auto max-w-3xl text-center">
+      <p className="font-bold uppercase tracking-[0.3em] text-[#C8102E]">
+        One-time projects or ongoing care
+      </p>
 
-      <section id="plans" className="bg-white py-20 sm:py-28">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="mx-auto max-w-3xl text-center">
-            <p className={`font-bold uppercase tracking-[0.3em] ${red}`}>
-              Simple maintenance plans
-            </p>
-            <h2 className="mt-3 font-display text-4xl font-black uppercase leading-tight text-ink sm:text-5xl">
-              Recurring care for rural properties
-            </h2>
-            <p className="mt-5 text-lg leading-8 text-steel">
-              Custom plans are available for hunting properties, ranches, vacant lots, and acreage owners who want predictable upkeep.
-            </p>
-          </div>
+      <h2 className="mt-3 font-display text-4xl font-black uppercase leading-tight text-ink sm:text-5xl">
+        Big cleanup now. Easier maintenance later.
+      </h2>
 
-          <div className="mt-12 grid gap-6 lg:grid-cols-3">
-            {plans.map((plan) => (
-              <article key={plan.name} className="overflow-hidden rounded-3xl border border-sand/70 bg-dust shadow-card">
-                <div className={`${plan.name === "Silver" ? "bg-charcoal" : bgRed} px-6 py-4 text-center`}>
-                  <h3 className="font-display text-2xl font-black uppercase text-white">
-                    {plan.name}
-                  </h3>
-                </div>
+      <p className="mt-5 text-lg leading-8 text-steel">
+        Some properties need a one-time push: fire fuel reduction, driveway
+        repair, hunting season prep, vacant lot cleanup, or reclaiming
+        overgrown acreage. After the heavy work is done, landowners can choose
+        an ongoing maintenance program to keep costs lower and prevent the
+        property from getting away again.
+      </p>
+    </div>
 
-                <div className="p-6">
-                  <ul className="grid gap-3">
-                    {plan.items.map((item) => (
-                      <li key={item} className="flex items-center gap-3 font-semibold text-charcoal">
-                        <CheckCircle2 className={`h-5 w-5 shrink-0 ${red}`} aria-hidden="true" />
-                        {item}
-                      </li>
-                    ))}
-                  </ul>
-
-                  <p className="mt-6 text-center font-semibold leading-7 text-steel">
-                    {plan.text}
-                  </p>
-                </div>
-              </article>
-            ))}
-          </div>
+    <div className="mt-12 grid gap-6 lg:grid-cols-2">
+      <article className="rounded-3xl border border-sand/70 bg-dust p-8 shadow-card">
+        <div className="mb-5 flex h-12 w-12 items-center justify-center rounded-2xl bg-[#C8102E] text-white">
+          <Shovel className="h-6 w-6" aria-hidden="true" />
         </div>
-      </section>
+
+        <h3 className="font-display text-3xl font-black uppercase text-ink">
+          One-Time Property Projects
+        </h3>
+
+        <p className="mt-4 leading-8 text-steel">
+          Ideal for landowners who need a specific problem solved: overgrowth,
+          fire-risk vegetation, rough access roads, storm cleanup, hunting
+          property prep, or a property that needs to look better before sale.
+        </p>
+
+        <ul className="mt-6 grid gap-3">
+          {[
+            "Fire fuel reduction and heavy mowing",
+            "Driveway repair and access improvement",
+            "Hunting property and sendero prep",
+            "Vacant lot cleanup before listing",
+            "Brush, cedar, and fence-line cleanup",
+          ].map((item) => (
+            <li
+              key={item}
+              className="flex items-center gap-3 font-semibold text-charcoal"
+            >
+              <CheckCircle2
+                className="h-5 w-5 shrink-0 text-[#C8102E]"
+                aria-hidden="true"
+              />
+              {item}
+            </li>
+          ))}
+        </ul>
+      </article>
+
+      <article className="rounded-3xl border border-sand/70 bg-dust p-8 shadow-card">
+        <div className="mb-5 flex h-12 w-12 items-center justify-center rounded-2xl bg-[#C8102E] text-white">
+          <Tractor className="h-6 w-6" aria-hidden="true" />
+        </div>
+
+        <h3 className="font-display text-3xl font-black uppercase text-ink">
+          Ongoing Maintenance Programs
+        </h3>
+
+        <p className="mt-4 leading-8 text-steel">
+          For landowners who want the property kept manageable year-round,
+          recurring service can reduce repeat mobilization costs, catch problems
+          earlier, and keep vegetation, roads, and access points from getting
+          out of control.
+        </p>
+
+        <ul className="mt-6 grid gap-3">
+          {[
+            "Scheduled seasonal upkeep",
+            "Cost savings compared with repeated one-off visits",
+            "Priority scheduling during busy seasons",
+            "Photo updates for absentee owners and investors",
+            "Custom programs for acreage, vacant lots, and hunting land",
+          ].map((item) => (
+            <li
+              key={item}
+              className="flex items-center gap-3 font-semibold text-charcoal"
+            >
+              <CheckCircle2
+                className="h-5 w-5 shrink-0 text-[#C8102E]"
+                aria-hidden="true"
+              />
+              {item}
+            </li>
+          ))}
+        </ul>
+      </article>
+    </div>
+  </div>
+</section>
+      
 
       <Fade from="from-white" to="to-dust" />
 
