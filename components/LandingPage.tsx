@@ -58,7 +58,7 @@ const services = [
     text: "Keep investment properties, inherited land, and lots for sale clean, accessible, market-ready, and protected from excessive vegetation growth.",
   },
   {
-    icon: Mountain,
+    icon: LandPlot,
     title: "Hunting Property Preparation",
     text: "Maintain senderos, access roads, campsites, shooting lanes, feeder access, and seasonal prep areas before hunting season arrives.",
   },
