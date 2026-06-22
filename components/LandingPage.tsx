@@ -5,17 +5,13 @@ import {
   BadgeCheck,
   CheckCircle2,
   Clock,
-  Fence,
   Hammer,
   LandPlot,
   MapPin,
-  Menu,
-  Mountain,
   Phone,
   Quote,
   ShieldCheck,
   Shovel,
-  Sprout,
   Star,
   Tractor,
   Trees,
@@ -26,54 +22,60 @@ import ContactForm from "./ContactForm";
 const phoneNumber = "(830) 302-6833";
 const phoneHref = "tel:+18303026833";
 
+const red = "text-[#C8102E]";
+const bgRed = "bg-[#C8102E]";
+const hoverRed = "hover:bg-[#9f0d24]";
+const borderRed = "border-[#C8102E]";
+
 const navLinks = [
   { href: "#services", label: "Services" },
   { href: "#why-us", label: "Why Us" },
-  { href: "#projects", label: "Projects" },
+  { href: "#who-we-serve", label: "Who We Serve" },
+  { href: "#plans", label: "Plans" },
   { href: "#service-area", label: "Service Area" },
-  { href: "#contact", label: "Get Quote" },
+  { href: "#contact", label: "Assessment" },
 ];
 
 const services = [
   {
     icon: Trees,
-    title: "Brush Clearing",
-    text: "Open up overgrown acreage, fence lines, trails, and homesites without losing the rugged character of your land.",
-  },
-  {
-    icon: Wrench,
-    title: "Driveway Grading & Repair",
-    text: "Smooth washboard roads, fix ruts, restore crown, and improve gravel driveways before the next Texas storm.",
-  },
-  {
-    icon: Mountain,
-    title: "Pad Prep",
-    text: "Prepare practical, compactable pads for sheds, barns, shops, water tanks, RVs, and rural improvements.",
-  },
-  {
-    icon: Shovel,
-    title: "Dirt Work",
-    text: "Move, spread, shape, and clean up material for small acreage projects that are too big for a shovel.",
+    title: "Fire Mitigation & Fuel Reduction",
+    text: "Reduce wildfire risk by controlling tall grass, heavy vegetation, cedar regrowth, and overgrown fence lines around homes, barns, roads, and hunting properties.",
   },
   {
     icon: Tractor,
-    title: "Brush Hogging",
-    text: "Cut down tall grass, weeds, and pasture growth so your property is usable, safer, and easier to maintain.",
+    title: "Acreage Maintenance",
+    text: "Ongoing mowing, shredding, cleanup, access improvement, and seasonal property care for rural homes and small acreage.",
+  },
+  {
+    icon: Wrench,
+    title: "Driveway Maintenance & Repair",
+    text: "Restore gravel driveways, repair washouts, eliminate ruts, and improve access before small problems become expensive.",
   },
   {
     icon: LandPlot,
-    title: "Drainage Improvement",
-    text: "Address standing water, erosion, and poor flow with practical grading that respects your land and budget.",
+    title: "Vacant Lot Care",
+    text: "Keep investment properties, inherited land, and lots for sale clean, accessible, market-ready, and protected from excessive vegetation growth.",
+  },
+  {
+    icon: Mountain,
+    title: "Hunting Property Preparation",
+    text: "Maintain senderos, access roads, campsites, shooting lanes, feeder access, and seasonal prep areas before hunting season arrives.",
+  },
+  {
+    icon: Shovel,
+    title: "Storm Cleanup & Access Restoration",
+    text: "Clear fallen limbs, overgrowth, and debris to restore safe access after storms and periods of rapid vegetation growth.",
   },
 ];
 
 const advantages = [
-  "You talk directly with the owner doing the work.",
-  "Small jobs are welcome — no big-contractor runaround.",
-  "Lower overhead means fair pricing and practical solutions.",
-  "No rental equipment learning curve, delivery fees, or wasted weekends.",
-  "Responsive calls, text updates, and straight answers.",
-  "Texas-tough equipment sized right for residential and rural properties.",
+  "You work directly with the owner.",
+  "Recurring maintenance plans available.",
+  "Small-acreage properties welcome.",
+  "No equipment ownership, storage, or maintenance headaches.",
+  "Fast communication and reliable scheduling.",
+  "Local Hill Country knowledge and practical solutions.",
 ];
 
 const testimonials = [
@@ -91,21 +93,40 @@ const testimonials = [
   },
 ];
 
-const projectCards = [
+const whoWeServe = [
   {
-    title: "Cedar & Brush Reclaim",
-    before: "Overgrown fence line",
-    after: "Clean access for maintenance",
+    title: "Busy Professionals",
+    text: "Enjoy your weekends while we handle the property maintenance.",
   },
   {
-    title: "Washed-Out Driveway",
-    before: "Ruts and standing water",
-    after: "Re-crowned gravel surface",
+    title: "Retirees & Aging Landowners",
+    text: "Keep the property you love without the physical demands of maintaining it.",
   },
   {
-    title: "Shop Pad Prep",
-    before: "Uneven native ground",
-    after: "Ready for base material",
+    title: "Hunting Property Owners",
+    text: "Arrive to hunt, not spend two days clearing roads and senderos.",
+  },
+  {
+    title: "Land Investors & Realtors",
+    text: "Keep vacant properties clean, accessible, and market-ready.",
+  },
+];
+
+const plans = [
+  {
+    name: "Bronze",
+    text: "Great for seasonal maintenance needs.",
+    items: ["Quarterly property visit", "Mowing as needed", "Basic property check", "Photo updates"],
+  },
+  {
+    name: "Silver",
+    text: "Consistent care for peace of mind.",
+    items: ["Bi-monthly maintenance", "Driveway touch-ups", "Vegetation management", "Photo updates"],
+  },
+  {
+    name: "Gold",
+    text: "Comprehensive care for your property year-round.",
+    items: ["Monthly property stewardship", "Priority scheduling", "Seasonal maintenance planning", "Detailed reports & photos"],
   },
 ];
 
@@ -113,9 +134,9 @@ export default function LandingPage() {
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
-    name: "Right Size Land & Tractor",
+    name: "Right Size Equipment Services",
     description:
-      "Owner-operated tractor and land management services in the Texas Hill Country and San Antonio area.",
+      "Owner-operated acreage maintenance, fire mitigation, hunting property preparation, vacant lot care, and land stewardship in the Texas Hill Country and greater San Antonio area.",
     telephone: "+1-830-302-6833",
     email: "anthonypmusetti@gmail.com",
     areaServed: [
@@ -128,20 +149,15 @@ export default function LandingPage() {
       "Texas Hill Country",
     ],
     serviceType: [
-      "Brush clearing",
-      "Driveway grading",
-      "Dirt work",
-      "Tractor services",
-      "Land clearing Texas",
+      "Acreage maintenance",
+      "Fire mitigation",
+      "Fuel reduction",
+      "Vacant lot maintenance",
+      "Hunting property preparation",
+      "Driveway maintenance",
+      "Brush management",
     ],
   };
-
-  const ownerBenefits = [
-    "Owner on every job site",
-    "Clear communication from quote to cleanup",
-    "Small-acreage jobs welcome",
-    "No big-contractor overhead markup",
-  ];
 
   const Fade = ({ from, to }: { from: string; to: string }) => (
     <div className={`h-16 bg-gradient-to-b ${from} ${to}`} aria-hidden="true" />
@@ -156,14 +172,10 @@ export default function LandingPage() {
 
       <header className="fixed inset-x-0 top-0 z-50 border-b border-white/10 bg-ink/[0.92] text-white shadow-lg backdrop-blur-xl">
         <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-3 sm:px-6 lg:px-8">
-          <a
-            href="#top"
-            className="flex items-center gap-3"
-            aria-label="Right Size Land & Tractor home"
-          >
+          <a href="#top" className="flex items-center gap-3" aria-label="Right Size Equipment Services home">
             <Image
               src="/images/projects/LogoMark.svg"
-              alt="Right Size Land & Tractor logo"
+              alt="Right Size Equipment Services logo"
               width={120}
               height={34}
               className="h-9 w-auto rounded"
@@ -172,184 +184,123 @@ export default function LandingPage() {
 
             <span className="block">
               <span className="block font-display text-base font-black uppercase tracking-wide text-white sm:text-xl">
-                Right Size Land & Tractor
+                Right Size Equipment Services
               </span>
               <span className="hidden text-xs font-semibold uppercase tracking-[0.22em] text-sand sm:block">
-                Owner Operated
+                Acreage Maintenance & Land Stewardship
               </span>
             </span>
           </a>
 
-          <nav
-            className="hidden items-center gap-7 text-sm font-bold uppercase tracking-wide text-dust/80 lg:flex"
-            aria-label="Main navigation"
-          >
+          <nav className="hidden items-center gap-7 text-sm font-bold uppercase tracking-wide text-dust/80 lg:flex" aria-label="Main navigation">
             {navLinks.map((link) => (
-              <a
-                key={link.href}
-                href={link.href}
-                className="transition hover:text-sand"
-              >
+              <a key={link.href} href={link.href} className="transition hover:text-sand">
                 {link.label}
               </a>
             ))}
           </nav>
 
           <div className="hidden items-center gap-3 sm:flex">
-            <a
-              href={phoneHref}
-              className="inline-flex items-center gap-2 rounded-full border border-sand/40 px-4 py-2 text-sm font-black text-sand transition hover:bg-white/10"
-            >
+            <a href={phoneHref} className="inline-flex items-center gap-2 rounded-full border border-sand/40 px-4 py-2 text-sm font-black text-sand transition hover:bg-white/10">
               <Phone className="h-4 w-4" aria-hidden="true" />
               {phoneNumber}
             </a>
 
-            <a
-              href="#contact"
-              className="rounded-full bg-rust px-5 py-2.5 text-sm font-black uppercase tracking-wide text-white shadow-lg transition hover:bg-mesquite"
-            >
-              Get Quote
+            <a href="#contact" className={`rounded-full ${bgRed} px-5 py-2.5 text-sm font-black uppercase tracking-wide text-white shadow-lg transition ${hoverRed}`}>
+              Get Assessment
             </a>
           </div>
 
-          <a
-            href="#contact"
-            className="rounded-full border border-sand/40 p-2 text-sand sm:hidden"
-            aria-label="Open contact section"
-          >
-            Get Quote
+          <a href="#contact" className="rounded-full border border-sand/40 p-2 text-sand sm:hidden" aria-label="Open contact section">
+            Assessment
           </a>
         </div>
       </header>
 
-      <a
-        href={phoneHref}
-        className="fixed inset-x-4 bottom-4 z-50 flex items-center justify-center gap-3 rounded-2xl bg-rust px-5 py-4 text-base font-black uppercase tracking-wide text-white shadow-rugged sm:hidden"
-      >
+      <a href={phoneHref} className={`fixed inset-x-4 bottom-4 z-50 flex items-center justify-center gap-3 rounded-2xl ${bgRed} px-5 py-4 text-base font-black uppercase tracking-wide text-white shadow-rugged sm:hidden`}>
         <Phone className="h-5 w-5" aria-hidden="true" />
         Tap to Call {phoneNumber}
       </a>
 
-      <section
-        id="top"
-        className="relative isolate min-h-screen bg-field pt-28 text-white sm:pt-32"
-      >
+      <section id="top" className="relative isolate min-h-screen bg-field pt-28 text-white sm:pt-32">
         <Image
           src="/images/projects/HeroImage.jpg"
-          alt="Texas tractor service hero"
+          alt="Texas acreage maintenance and property stewardship"
           fill
           className="-z-20 object-cover"
           priority
           sizes="100vw"
         />
 
-        <div
-          className="absolute inset-0 -z-10 bg-gradient-to-r from-ink/90 via-ink/75 to-ink/50"
-          aria-hidden="true"
-        />
-        <div
-          className="absolute inset-0 -z-10 bg-grit bg-[length:18px_18px] opacity-20"
-          aria-hidden="true"
-        />
-        <div
-          className="absolute inset-x-0 bottom-0 -z-10 h-52 bg-gradient-to-t from-ink to-transparent"
-          aria-hidden="true"
-        />
+        <div className="absolute inset-0 -z-10 bg-gradient-to-r from-ink/90 via-ink/75 to-ink/50" aria-hidden="true" />
+        <div className="absolute inset-0 -z-10 bg-grit bg-[length:18px_18px] opacity-20" aria-hidden="true" />
+        <div className="absolute inset-x-0 bottom-0 -z-10 h-52 bg-gradient-to-t from-ink to-transparent" aria-hidden="true" />
 
         <div className="mx-auto grid max-w-7xl items-center gap-12 px-4 pb-20 pt-10 sm:px-6 lg:grid-cols-[1.05fr_.95fr] lg:px-8 lg:pb-28">
           <div className="animate-rise-in">
             <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-sand/30 bg-white/10 px-4 py-2 text-sm font-bold text-sand backdrop-blur">
               <BadgeCheck className="h-4 w-4" aria-hidden="true" />
-              Owner-operated tractor services near San Antonio
+              Owner-operated acreage maintenance & land stewardship
             </div>
 
             <h1 className="max-w-4xl font-display text-5xl font-black uppercase leading-[0.95] tracking-tight text-white sm:text-6xl lg:text-7xl">
-              Get Your Land Back Without Losing Your Weekend
+              Own Property Without the <span className={red}>Maintenance</span>.
             </h1>
 
             <p className="mt-6 max-w-2xl text-lg leading-8 text-dust/[0.88] sm:text-xl">
-              Brush clearing, driveway grading, pad prep, dirt work, drainage
-              fixes, and small acreage cleanup for Texas homeowners, ranch
-              owners, and rural properties.
+              We help busy professionals, retirees, hunting property owners, and land investors keep their property safe, accessible, and looking its best—without spending weekends on a tractor.
             </p>
 
             <div className="mt-8 flex flex-col gap-3 sm:flex-row">
-              <a
-                href={phoneHref}
-                className="inline-flex items-center justify-center gap-3 rounded-xl bg-rust px-7 py-4 text-lg font-black uppercase tracking-wide text-white shadow-rugged transition hover:-translate-y-0.5 hover:bg-mesquite"
-              >
+              <a href={phoneHref} className={`inline-flex items-center justify-center gap-3 rounded-xl ${bgRed} px-7 py-4 text-lg font-black uppercase tracking-wide text-white shadow-rugged transition hover:-translate-y-0.5 ${hoverRed}`}>
                 <Phone className="h-5 w-5" aria-hidden="true" />
                 Call {phoneNumber}
               </a>
 
-              <a
-                href="#contact"
-                className="inline-flex items-center justify-center gap-3 rounded-xl border border-sand/50 bg-white/10 px-7 py-4 text-lg font-black uppercase tracking-wide text-white backdrop-blur transition hover:-translate-y-0.5 hover:bg-white/15"
-              >
-                Request Quote
+              <a href="#contact" className="inline-flex items-center justify-center gap-3 rounded-xl border border-sand/50 bg-white/10 px-7 py-4 text-lg font-black uppercase tracking-wide text-white backdrop-blur transition hover:-translate-y-0.5 hover:bg-white/15">
+                Get My Property Assessment
                 <ArrowRight className="h-5 w-5" aria-hidden="true" />
               </a>
             </div>
 
-            <div className="mt-8 grid gap-3 text-sm font-semibold text-dust/[0.85] sm:grid-cols-3">
+            <div className="mt-8 grid gap-3 text-sm font-semibold text-dust/[0.85] sm:grid-cols-2 lg:grid-cols-4">
               {[
-                "Fast call backs",
-                "Small jobs accepted",
-                "Honest local pricing",
-                "5-star local reviews",
+                "Fire mitigation",
+                "Vacant lot care",
+                "Hunting property prep",
+                "Maintenance plans",
               ].map((item) => (
-                <div
-                  key={item}
-                  className="flex items-center gap-2 rounded-full bg-white/[0.09] px-4 py-3"
-                >
-                  <CheckCircle2
-                    className="h-5 w-5 text-sand"
-                    aria-hidden="true"
-                  />
+                <div key={item} className="flex items-center gap-2 rounded-full bg-white/[0.09] px-4 py-3">
+                  <CheckCircle2 className="h-5 w-5 text-sand" aria-hidden="true" />
                   {item}
                 </div>
               ))}
             </div>
           </div>
 
-          <div
-            className="relative animate-rise-in lg:justify-self-end"
-            style={{ animationDelay: "120ms" }}
-          >
+          <div className="relative animate-rise-in lg:justify-self-end" style={{ animationDelay: "120ms" }}>
             <div className="rounded-[2rem] border border-sand/30 bg-white/10 p-3 shadow-rugged backdrop-blur">
               <div className="relative overflow-hidden rounded-[1.5rem] bg-charcoal p-6 sm:p-8">
-                <div
-                  className="absolute inset-0 texture-overlay opacity-80"
-                  aria-hidden="true"
-                />
+                <div className="absolute inset-0 texture-overlay opacity-80" aria-hidden="true" />
 
                 <div className="relative">
-                  <div className="flex items-center justify-between border-b border-white/15 pb-5">
-                    <div>
-                      <p className="text-sm font-bold uppercase tracking-[0.24em] text-sand">
-                        Typical projects
-                      </p>
-                      <h2 className="mt-1 font-display text-3xl font-black uppercase">
-                        Right size solutions for your property
-                      </h2>
-                    </div>
-
-                    
+                  <div className="border-b border-white/15 pb-5">
+                    <p className="text-sm font-bold uppercase tracking-[0.24em] text-sand">
+                      Property care programs
+                    </p>
+                    <h2 className="mt-1 font-display text-3xl font-black uppercase">
+                      Right size maintenance for your land
+                    </h2>
                   </div>
 
                   <div className="mt-6 grid gap-4">
                     {[
-                      ["Driveways", "Ruts, washouts, gravel shaping"],
-                      ["Brush", "Cedar, mesquite, trails, fence lines"],
-                      ["Pads", "Sheds, barns, tanks, RV spots"],
+                      ["Fire Readiness", "Fuel reduction, mowing, brush control"],
+                      ["Hunting Land", "Senderos, roads, camps, feeder access"],
+                      ["Vacant Lots", "Clean, accessible, market-ready land"],
                     ].map(([title, text]) => (
-                      <div
-                        key={title}
-                        className="rounded-2xl border border-white/10 bg-ink/[0.55] p-4"
-                      >
-                        <p className="font-display text-2xl font-bold uppercase text-white">
-                          {title}
-                        </p>
+                      <div key={title} className="rounded-2xl border border-white/10 bg-ink/[0.55] p-4">
+                        <p className="font-display text-2xl font-bold uppercase text-white">{title}</p>
                         <p className="mt-1 text-sm text-dust/75">{text}</p>
                       </div>
                     ))}
@@ -357,12 +308,10 @@ export default function LandingPage() {
 
                   <div className="mt-6 rounded-2xl bg-sand p-5 text-ink">
                     <p className="font-display text-3xl font-black uppercase">
-                      No rental hassle.
+                      No equipment hassle.
                     </p>
                     <p className="mt-2 text-sm font-semibold leading-6 text-charcoal">
-                      Skip the trailer, insurance, learning curve, and
-                      half-finished Saturday. Hire the right machine and an
-                      operator who does this every week.
+                      Skip the tractor payment, storage, repairs, fuel runs, and lost weekends. Keep the property—hand off the maintenance.
                     </p>
                   </div>
                 </div>
@@ -377,16 +326,14 @@ export default function LandingPage() {
       <section id="services" className="bg-dust py-20 sm:py-28">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl">
-            <p className="font-bold uppercase tracking-[0.3em] text-rust">
-              Tractor services
+            <p className={`font-bold uppercase tracking-[0.3em] ${red}`}>
+              Property maintenance services
             </p>
             <h2 className="mt-3 font-display text-4xl font-black uppercase leading-tight text-ink sm:text-5xl">
-              From overgrown to usable
+              Protect your investment. Enjoy your property.
             </h2>
             <p className="mt-5 text-lg leading-8 text-steel">
-              Whether you know exactly what you want or just know the property
-              is getting away from you, we can help plan the practical way to
-              get it done.
+              From fire-risk vegetation to neglected driveways and seasonal hunting prep, we help keep your land usable, presentable, and ready when you need it.
             </p>
           </div>
 
@@ -395,11 +342,8 @@ export default function LandingPage() {
               const Icon = service.icon;
 
               return (
-                <article
-                  key={service.title}
-                  className="group rounded-3xl border border-sand/70 bg-white p-6 shadow-card transition duration-300 hover:-translate-y-1 hover:border-rust/50"
-                >
-                  <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-cedar text-sand transition group-hover:bg-rust group-hover:text-white">
+                <article key={service.title} className={`group rounded-3xl border border-sand/70 bg-white p-6 shadow-card transition duration-300 hover:-translate-y-1 hover:${borderRed}`}>
+                  <div className={`flex h-12 w-12 items-center justify-center rounded-2xl bg-[#C8102E]/10 ${red} transition group-hover:${bgRed} group-hover:text-white`}>
                     <Icon className="h-6 w-6" aria-hidden="true" />
                   </div>
 
@@ -424,23 +368,17 @@ export default function LandingPage() {
               Why choose us
             </p>
             <h2 className="mt-3 font-display text-4xl font-black uppercase leading-tight sm:text-5xl">
-              The practical choice between DIY and a big contractor
+              Your property. Our responsibility.
             </h2>
             <p className="mt-5 text-lg leading-8 text-dust/[0.78]">
-              Large contractors often pass on smaller acreage work. Rental
-              equipment sounds cheaper until the delivery clock starts and you
-              are learning controls in the heat. We bring the equipment,
-              experience, and straight talk to finish the job right.
+              Most acreage owners do not want another project. They want a property that stays maintained, safe, accessible, and ready to enjoy. We remove the hassle of ownership while helping protect your investment.
             </p>
           </div>
 
           <div className="grid gap-4 sm:grid-cols-2">
             {advantages.map((advantage) => (
-              <div
-                key={advantage}
-                className="rounded-2xl border border-white/10 bg-white/[0.08] p-5"
-              >
-                <ShieldCheck className="h-6 w-6 text-rust" aria-hidden="true" />
+              <div key={advantage} className="rounded-2xl border border-white/10 bg-white/[0.08] p-5">
+                <ShieldCheck className={`h-6 w-6 ${red}`} aria-hidden="true" />
                 <p className="mt-4 font-semibold leading-7 text-dust/[0.88]">
                   {advantage}
                 </p>
@@ -452,19 +390,91 @@ export default function LandingPage() {
 
       <Fade from="from-ink" to="to-dust" />
 
+      <section id="who-we-serve" className="bg-dust py-20 sm:py-28">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className="max-w-3xl">
+            <p className={`font-bold uppercase tracking-[0.3em] ${red}`}>
+              Who we serve
+            </p>
+            <h2 className="mt-3 font-display text-4xl font-black uppercase leading-tight text-ink sm:text-5xl">
+              Built for owners who need the land maintained, not another weekend chore
+            </h2>
+          </div>
+
+          <div className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+            {whoWeServe.map((item) => (
+              <article key={item.title} className="rounded-3xl border border-sand/70 bg-white p-6 shadow-card">
+                <div className={`mb-5 flex h-12 w-12 items-center justify-center rounded-2xl ${bgRed} text-white`}>
+                  <CheckCircle2 className="h-6 w-6" aria-hidden="true" />
+                </div>
+
+                <h3 className="font-display text-2xl font-bold uppercase text-ink">
+                  {item.title}
+                </h3>
+
+                <p className="mt-3 leading-7 text-steel">{item.text}</p>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section id="plans" className="bg-white py-20 sm:py-28">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className="mx-auto max-w-3xl text-center">
+            <p className={`font-bold uppercase tracking-[0.3em] ${red}`}>
+              Simple maintenance plans
+            </p>
+            <h2 className="mt-3 font-display text-4xl font-black uppercase leading-tight text-ink sm:text-5xl">
+              Recurring care for rural properties
+            </h2>
+            <p className="mt-5 text-lg leading-8 text-steel">
+              Custom plans are available for hunting properties, ranches, vacant lots, and acreage owners who want predictable upkeep.
+            </p>
+          </div>
+
+          <div className="mt-12 grid gap-6 lg:grid-cols-3">
+            {plans.map((plan) => (
+              <article key={plan.name} className="overflow-hidden rounded-3xl border border-sand/70 bg-dust shadow-card">
+                <div className={`${plan.name === "Silver" ? "bg-charcoal" : bgRed} px-6 py-4 text-center`}>
+                  <h3 className="font-display text-2xl font-black uppercase text-white">
+                    {plan.name}
+                  </h3>
+                </div>
+
+                <div className="p-6">
+                  <ul className="grid gap-3">
+                    {plan.items.map((item) => (
+                      <li key={item} className="flex items-center gap-3 font-semibold text-charcoal">
+                        <CheckCircle2 className={`h-5 w-5 shrink-0 ${red}`} aria-hidden="true" />
+                        {item}
+                      </li>
+                    ))}
+                  </ul>
+
+                  <p className="mt-6 text-center font-semibold leading-7 text-steel">
+                    {plan.text}
+                  </p>
+                </div>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <Fade from="from-white" to="to-dust" />
+
       <section id="service-area" className="bg-dust py-20 sm:py-28">
         <div className="mx-auto grid max-w-7xl gap-10 px-4 sm:px-6 lg:grid-cols-[1fr_.9fr] lg:px-8">
           <div>
-            <p className="font-bold uppercase tracking-[0.3em] text-rust">
+            <p className={`font-bold uppercase tracking-[0.3em] ${red}`}>
               Service area
             </p>
             <h2 className="mt-3 font-display text-4xl font-black uppercase leading-tight text-ink sm:text-5xl">
               Serving the Texas Hill Country and greater San Antonio area
             </h2>
             <p className="mt-5 text-lg leading-8 text-steel">
-              Based for rural property work around San Antonio, with service
-              available for homeowners, ranch owners, and small acreage
-              customers in nearby Hill Country communities.
+              Based near Boerne for acreage maintenance, fire mitigation, vacant lot care, driveway maintenance, hunting property preparation, and rural property stewardship.
             </p>
 
             <div className="mt-8 flex flex-wrap gap-3">
@@ -478,10 +488,7 @@ export default function LandingPage() {
                 "Pipe Creek",
                 "Spring Branch",
               ].map((city) => (
-                <span
-                  key={city}
-                  className="rounded-full border border-sand bg-white px-4 py-2 text-sm font-bold text-charcoal"
-                >
+                <span key={city} className="rounded-full border border-sand bg-white px-4 py-2 text-sm font-bold text-charcoal">
                   {city}, TX
                 </span>
               ))}
@@ -494,15 +501,10 @@ export default function LandingPage() {
               Not sure if you are in range?
             </h3>
             <p className="mt-4 leading-8 text-dust/[0.82]">
-              Call or send the address. If the project is a fit, we will be
-              direct about travel, timing, and the most cost-effective way to
-              tackle it.
+              Call or send the address. If the property is a fit, we will be direct about travel, timing, and the most cost-effective way to keep it maintained.
             </p>
 
-            <a
-              href={phoneHref}
-              className="mt-6 inline-flex items-center gap-2 rounded-xl bg-rust px-6 py-4 font-black uppercase tracking-wide text-white transition hover:bg-mesquite"
-            >
+            <a href={phoneHref} className={`mt-6 inline-flex items-center gap-2 rounded-xl ${bgRed} px-6 py-4 font-black uppercase tracking-wide text-white transition ${hoverRed}`}>
               <Phone className="h-5 w-5" aria-hidden="true" />
               Call {phoneNumber}
             </a>
@@ -522,17 +524,17 @@ export default function LandingPage() {
               You hire the owner, not a revolving crew
             </h2>
             <p className="mt-5 text-lg leading-8 text-dust/80">
-              Texas acreage projects are personal. You need someone who treats
-              your land like it matters, shows up when promised, and follows
-              through without excuses.
+              Acreage maintenance is personal. You need someone who treats your land like it matters, shows up when promised, and follows through without excuses.
             </p>
 
             <div className="mt-6 grid gap-3">
-              {ownerBenefits.map((benefit) => (
-                <div
-                  key={benefit}
-                  className="rounded-xl border border-white/10 bg-white/10 px-4 py-3 font-semibold text-dust"
-                >
+              {[
+                "Owner on every job site",
+                "Clear communication from assessment to cleanup",
+                "Small-acreage jobs welcome",
+                "Recurring maintenance available",
+              ].map((benefit) => (
+                <div key={benefit} className="rounded-xl border border-white/10 bg-white/10 px-4 py-3 font-semibold text-dust">
                   {benefit}
                 </div>
               ))}
@@ -544,9 +546,7 @@ export default function LandingPage() {
               Built for Texas acreage owners
             </h3>
             <p className="mt-4 leading-8">
-              When life gets busy, projects slip. We help you reclaim your time,
-              raise property value, and finally cross off the hard jobs that
-              keep getting pushed to another weekend.
+              When life gets busy, maintenance slips. We help you reclaim your weekends, reduce risk, protect property value, and keep your land ready to use.
             </p>
           </div>
         </div>
@@ -556,24 +556,21 @@ export default function LandingPage() {
 
       <section className="bg-dust py-20 sm:py-24" id="transformations">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <p className="font-bold uppercase tracking-[0.3em] text-rust">
-            Project Transformation
+          <p className={`font-bold uppercase tracking-[0.3em] ${red}`}>
+            Property transformation
           </p>
           <h2 className="mt-3 font-display text-4xl font-black uppercase text-ink sm:text-5xl">
-            Raw ground to finished shed pad
+            From neglected to manageable
           </h2>
 
           <div className="mt-10 grid gap-6 md:grid-cols-2 lg:grid-cols-4">
             {[
-              ["ShedPadBefore.jpg", "Rough native ground"],
-              ["ShedPadDuring1.jpg", "Clearing and initial leveling"],
-              ["ShedPadDuring2.jpg", "Material movement"],
-              ["ShedPadDone.jpg", "Finished level pad ready for shed delivery"],
+              ["ShedPadBefore.jpg", "Overgrown or uneven ground"],
+              ["ShedPadDuring1.jpg", "Clearing and initial cleanup"],
+              ["ShedPadDuring2.jpg", "Material movement and shaping"],
+              ["ShedPadDone.jpg", "Clean, usable property improvement"],
             ].map(([src, caption], index) => (
-              <figure
-                key={src}
-                className="group overflow-hidden rounded-2xl border border-sand/70 bg-white shadow-card"
-              >
+              <figure key={src} className="group overflow-hidden rounded-2xl border border-sand/70 bg-white shadow-card">
                 <div className="relative aspect-[4/5]">
                   <Image
                     src={`/images/projects/${src}`}
@@ -598,7 +595,7 @@ export default function LandingPage() {
       <section className="bg-white py-20 sm:py-28">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl">
-            <p className="font-bold uppercase tracking-[0.3em] text-rust">
+            <p className={`font-bold uppercase tracking-[0.3em] ${red}`}>
               What customers say
             </p>
             <h2 className="mt-3 font-display text-4xl font-black uppercase leading-tight text-ink sm:text-5xl">
@@ -608,33 +605,21 @@ export default function LandingPage() {
 
           <div className="mt-12 grid gap-6 lg:grid-cols-3">
             {testimonials.map((testimonial) => (
-              <figure
-                key={testimonial.name}
-                className="rounded-3xl border border-sand/70 bg-dust p-7 shadow-card"
-              >
-                <Quote className="h-8 w-8 text-rust" aria-hidden="true" />
+              <figure key={testimonial.name} className="rounded-3xl border border-sand/70 bg-dust p-7 shadow-card">
+                <Quote className={`h-8 w-8 ${red}`} aria-hidden="true" />
                 <blockquote className="mt-5 text-lg font-semibold leading-8 text-charcoal">
                   “{testimonial.quote}”
                 </blockquote>
 
                 <figcaption className="mt-6 border-t border-sand/60 pt-5">
-                  <div
-                    className="flex gap-1 text-rust"
-                    aria-label="Five star rating"
-                  >
+                  <div className={`flex gap-1 ${red}`} aria-label="Five star rating">
                     {[...Array(5)].map((_, index) => (
-                      <Star
-                        key={index}
-                        className="h-4 w-4 fill-current"
-                        aria-hidden="true"
-                      />
+                      <Star key={index} className="h-4 w-4 fill-current" aria-hidden="true" />
                     ))}
                   </div>
 
                   <p className="mt-3 font-black text-ink">{testimonial.name}</p>
-                  <p className="text-sm font-semibold text-steel">
-                    {testimonial.place}
-                  </p>
+                  <p className="text-sm font-semibold text-steel">{testimonial.place}</p>
                 </figcaption>
               </figure>
             ))}
@@ -645,7 +630,7 @@ export default function LandingPage() {
       <section className="relative isolate overflow-hidden px-4 py-24 text-white sm:px-6 lg:px-8">
         <Image
           src="/images/projects/FinalImage.jpg"
-          alt="Completed land improvement project"
+          alt="Maintained Texas acreage property"
           fill
           className="-z-20 object-cover"
           sizes="100vw"
@@ -659,28 +644,20 @@ export default function LandingPage() {
               Ready when you are
             </p>
             <h2 className="mt-3 font-display text-4xl font-black uppercase leading-tight sm:text-5xl">
-              Stop staring at the same project every weekend
+              Stop maintaining your property. Start enjoying it.
             </h2>
             <p className="mt-5 max-w-3xl text-lg leading-8 text-dust/[0.9]">
-              Get a realistic plan, a fair quote, and an owner-operator who
-              respects your property. One call can turn “someday” into scheduled
-              work.
+              Whether you own 2 acres or 200, we will help keep your land safe, accessible, and looking its best year-round.
             </p>
 
             <div className="mt-8 flex flex-col gap-3 sm:flex-row">
-              <a
-                href={phoneHref}
-                className="inline-flex items-center justify-center gap-3 rounded-xl bg-rust px-7 py-4 text-lg font-black uppercase tracking-wide text-white shadow-rugged transition hover:bg-mesquite"
-              >
+              <a href={phoneHref} className={`inline-flex items-center justify-center gap-3 rounded-xl ${bgRed} px-7 py-4 text-lg font-black uppercase tracking-wide text-white shadow-rugged transition ${hoverRed}`}>
                 <Phone className="h-5 w-5" aria-hidden="true" />
                 Call Now
               </a>
 
-              <a
-                href="#contact"
-                className="inline-flex items-center justify-center gap-3 rounded-xl border border-sand/50 px-7 py-4 text-lg font-black uppercase tracking-wide text-white transition hover:bg-white/10"
-              >
-                Send Details
+              <a href="#contact" className="inline-flex items-center justify-center gap-3 rounded-xl border border-sand/50 px-7 py-4 text-lg font-black uppercase tracking-wide text-white transition hover:bg-white/10">
+                Request Property Assessment
                 <ArrowRight className="h-5 w-5" aria-hidden="true" />
               </a>
             </div>
@@ -693,48 +670,39 @@ export default function LandingPage() {
       <section id="contact" className="bg-dust py-20 pb-32 sm:py-28">
         <div className="mx-auto grid max-w-7xl gap-10 px-4 sm:px-6 lg:grid-cols-[.85fr_1.15fr] lg:px-8">
           <div>
-            <p className="font-bold uppercase tracking-[0.3em] text-rust">
-              Get a quote
+            <p className={`font-bold uppercase tracking-[0.3em] ${red}`}>
+              Get a property assessment
             </p>
             <h2 className="mt-3 font-display text-4xl font-black uppercase leading-tight sm:text-5xl">
-              Tell us what needs doing
+              Tell us what needs maintaining
             </h2>
             <p className="mt-5 text-lg leading-8 text-steel">
-              Photos help. Measurements help. But if all you know is “this spot
-              is a mess,” that is enough to start the conversation.
+              Photos help. Acreage size helps. But if all you know is “the property is getting away from me,” that is enough to start the conversation.
             </p>
 
             <div className="mt-8 grid gap-4">
               <div className="flex gap-4 rounded-2xl bg-white p-5 shadow-card">
-                <Clock
-                  className="h-7 w-7 shrink-0 text-rust"
-                  aria-hidden="true"
-                />
+                <Clock className={`h-7 w-7 shrink-0 ${red}`} aria-hidden="true" />
 
                 <div>
                   <h3 className="font-display text-2xl font-bold uppercase">
                     Fast response
                   </h3>
                   <p className="mt-1 text-steel">
-                    Most quote requests receive a same-day reply during normal
-                    working hours.
+                    Most assessment requests receive a same-day reply during normal working hours.
                   </p>
                 </div>
               </div>
 
               <div className="flex gap-4 rounded-2xl bg-white p-5 shadow-card">
-                <Hammer
-                  className="h-7 w-7 shrink-0 text-rust"
-                  aria-hidden="true"
-                />
+                <Hammer className={`h-7 w-7 shrink-0 ${red}`} aria-hidden="true" />
 
                 <div>
                   <h3 className="font-display text-2xl font-bold uppercase">
-                    Practical advice
+                    Practical maintenance plan
                   </h3>
                   <p className="mt-1 text-steel">
-                    If there is a smarter way to phase the job or save money,
-                    you will hear it.
+                    If there is a smarter way to phase the work, reduce cost, or set up recurring maintenance, you will hear it.
                   </p>
                 </div>
               </div>
@@ -751,7 +719,7 @@ export default function LandingPage() {
             <div className="flex items-center gap-4">
               <Image
                 src="/images/projects/LogoMark.svg"
-                alt="Right Size Land & Tractor logo"
+                alt="Right Size Equipment Services logo"
                 width={70}
                 height={70}
                 className="h-14 w-auto"
@@ -759,34 +727,21 @@ export default function LandingPage() {
 
               <div>
                 <p className="font-display text-2xl font-black uppercase">
-                  Right Size Land & Tractor
+                  Right Size Equipment Services
                 </p>
 
                 <p className="mt-1 text-sm font-semibold text-dust/70">
-                  Owner-operated tractor services for residential and rural
-                  Texas properties.
+                  Acreage maintenance, fire mitigation, vacant lot care, and land stewardship for Texas properties.
                 </p>
               </div>
             </div>
 
             <div className="flex gap-3">
-              <a
-                href="https://share.google/Wbva0jZYkZ5eRiiOL"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="Google Business Profile"
-                className="rounded-full border border-sand/40 px-4 py-2 text-sm font-bold text-sand transition hover:bg-white/10"
-              >
+              <a href="https://share.google/Wbva0jZYkZ5eRiiOL" target="_blank" rel="noopener noreferrer" aria-label="Google Business Profile" className="rounded-full border border-sand/40 px-4 py-2 text-sm font-bold text-sand transition hover:bg-white/10">
                 Google
               </a>
 
-              <a
-                href="https://www.facebook.com/profile.php?id=61575389984384"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="Facebook Business Page"
-                className="rounded-full border border-sand/40 px-4 py-2 text-sm font-bold text-sand transition hover:bg-white/10"
-              >
+              <a href="https://www.facebook.com/profile.php?id=61575389984384" target="_blank" rel="noopener noreferrer" aria-label="Facebook Business Page" className="rounded-full border border-sand/40 px-4 py-2 text-sm font-bold text-sand transition hover:bg-white/10">
                 Facebook
               </a>
             </div>
@@ -797,10 +752,7 @@ export default function LandingPage() {
               {phoneNumber}
             </a>
 
-            <a
-              href="mailto:anthonypmusetti@gmail.com"
-              className="hover:text-sand"
-            >
+            <a href="mailto:anthonypmusetti@gmail.com" className="hover:text-sand">
               anthonypmusetti@gmail.com
             </a>
 
