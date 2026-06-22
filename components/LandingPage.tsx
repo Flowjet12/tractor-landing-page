@@ -35,7 +35,6 @@ const navLinks = [
   { href: "#service-area", label: "Service Area" },
   { href: "#contact", label: "Assessment" },
 ];
-];
 
 const services = [
   {
