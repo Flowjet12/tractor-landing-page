@@ -705,138 +705,169 @@ export default function LandingPage() {
       </section>
 
       <section className="relative isolate overflow-hidden px-4 py-24 text-white sm:px-6 lg:px-8">
+  <Image
+    src="/images/projects/FinalImage.jpg"
+    alt="Maintained Texas acreage property"
+    fill
+    className="-z-20 object-cover"
+    sizes="100vw"
+  />
+
+  <div className="absolute inset-0 -z-10 bg-ink/65" aria-hidden="true" />
+
+  <div className="mx-auto max-w-7xl">
+    <div className="max-w-4xl rounded-[2rem] border border-white/20 bg-ink/75 p-8 shadow-rugged backdrop-blur sm:p-12">
+      <p className="font-bold uppercase tracking-[0.3em] text-sand">
+        Ready when you are
+      </p>
+
+      <h2 className="mt-3 font-display text-4xl font-black uppercase leading-tight sm:text-5xl">
+        Stop maintaining your property.{" "}
+        <span className="text-[#C8102E]">Start enjoying it.</span>
+      </h2>
+
+      <p className="mt-5 max-w-3xl text-lg leading-8 text-dust/[0.9]">
+        Whether you own 2 acres or 200, Right Size Land & Tractor can help keep
+        your land safe, accessible, and looking its best year-round.
+      </p>
+
+      <div className="mt-8 flex flex-col gap-3 sm:flex-row">
+        <a
+          href={phoneHref}
+          className="inline-flex items-center justify-center gap-3 rounded-xl bg-[#C8102E] px-7 py-4 text-lg font-black uppercase tracking-wide text-white shadow-rugged transition hover:bg-[#9f0d24]"
+        >
+          <Phone className="h-5 w-5" aria-hidden="true" />
+          Call Now
+        </a>
+
+        <a
+          href="#contact"
+          className="inline-flex items-center justify-center gap-3 rounded-xl border border-sand/50 px-7 py-4 text-lg font-black uppercase tracking-wide text-white transition hover:bg-white/10"
+        >
+          Request Property Assessment
+          <ArrowRight className="h-5 w-5" aria-hidden="true" />
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<Fade from="from-ink" to="to-dust" />
+
+<section id="contact" className="bg-dust py-20 pb-32 sm:py-28">
+  <div className="mx-auto grid max-w-7xl gap-10 px-4 sm:px-6 lg:grid-cols-[.85fr_1.15fr] lg:px-8">
+    <div>
+      <p className="font-bold uppercase tracking-[0.3em] text-[#C8102E]">
+        Get a property assessment
+      </p>
+
+      <h2 className="mt-3 font-display text-4xl font-black uppercase leading-tight sm:text-5xl">
+        Tell us what needs maintaining
+      </h2>
+
+      <p className="mt-5 text-lg leading-8 text-steel">
+        Photos help. Acreage size helps. But if all you know is “the property
+        is getting away from me,” that is enough to start the conversation.
+      </p>
+
+      <div className="mt-8 grid gap-4">
+        <div className="flex gap-4 rounded-2xl bg-white p-5 shadow-card">
+          <Clock
+            className="h-7 w-7 shrink-0 text-[#C8102E]"
+            aria-hidden="true"
+          />
+
+          <div>
+            <h3 className="font-display text-2xl font-bold uppercase">
+              Fast response
+            </h3>
+            <p className="mt-1 text-steel">
+              Most assessment requests receive a same-day reply during normal
+              working hours.
+            </p>
+          </div>
+        </div>
+
+        <div className="flex gap-4 rounded-2xl bg-white p-5 shadow-card">
+          <Hammer
+            className="h-7 w-7 shrink-0 text-[#C8102E]"
+            aria-hidden="true"
+          />
+
+          <div>
+            <h3 className="font-display text-2xl font-bold uppercase">
+              Practical maintenance plan
+            </h3>
+            <p className="mt-1 text-steel">
+              If there is a smarter way to phase the work, reduce cost, or set
+              up recurring maintenance, you will hear it.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <ContactForm />
+  </div>
+</section>
+
+<footer className="border-t border-white/10 bg-ink px-4 py-10 text-white sm:px-6 lg:px-8">
+  <div className="mx-auto flex max-w-7xl flex-col gap-8 md:flex-row md:items-center md:justify-between">
+    <div className="flex flex-col gap-4">
+      <div className="flex items-center gap-4">
         <Image
-          src="/images/projects/FinalImage.jpg"
-          alt="Maintained Texas acreage property"
-          fill
-          className="-z-20 object-cover"
-          sizes="100vw"
+          src="/images/projects/LogoMarkRed.png"
+          alt="Right Size Land & Tractor logo"
+          width={70}
+          height={70}
+          className="h-14 w-14 rounded-xl object-contain"
         />
 
-        <div className="absolute inset-0 -z-10 bg-ink/55" aria-hidden="true" />
+        <div>
+          <p className="font-display text-2xl font-black uppercase">
+            Right Size Land & Tractor
+          </p>
 
-        <div className="mx-auto max-w-7xl">
-          <div className="max-w-4xl rounded-[2rem] border border-white/20 bg-ink/70 p-8 shadow-rugged backdrop-blur sm:p-12">
-            <p className="font-bold uppercase tracking-[0.3em] text-sand">
-              Ready when you are
-            </p>
-            <h2 className="mt-3 font-display text-4xl font-black uppercase leading-tight sm:text-5xl">
-              Stop maintaining your property. Start enjoying it.
-            </h2>
-            <p className="mt-5 max-w-3xl text-lg leading-8 text-dust/[0.9]">
-              Whether you own 2 acres or 200, we will help keep your land safe, accessible, and looking its best year-round.
-            </p>
-
-            <div className="mt-8 flex flex-col gap-3 sm:flex-row">
-              <a href={phoneHref} className={`inline-flex items-center justify-center gap-3 rounded-xl ${bgRed} px-7 py-4 text-lg font-black uppercase tracking-wide text-white shadow-rugged transition ${hoverRed}`}>
-                <Phone className="h-5 w-5" aria-hidden="true" />
-                Call Now
-              </a>
-
-              <a href="#contact" className="inline-flex items-center justify-center gap-3 rounded-xl border border-sand/50 px-7 py-4 text-lg font-black uppercase tracking-wide text-white transition hover:bg-white/10">
-                Request Property Assessment
-                <ArrowRight className="h-5 w-5" aria-hidden="true" />
-              </a>
-            </div>
-          </div>
+          <p className="mt-1 text-sm font-semibold text-dust/70">
+            Acreage maintenance, fire mitigation, vacant lot care, and land
+            stewardship for Texas properties.
+          </p>
         </div>
-      </section>
+      </div>
 
-      <Fade from="from-ink" to="to-dust" />
+      <div className="flex gap-3">
+        <a
+          href="https://share.google/Wbva0jZYkZ5eRiiOL"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Google Business Profile"
+          className="rounded-full border border-sand/40 px-4 py-2 text-sm font-bold text-sand transition hover:bg-white/10"
+        >
+          Google
+        </a>
 
-      <section id="contact" className="bg-dust py-20 pb-32 sm:py-28">
-        <div className="mx-auto grid max-w-7xl gap-10 px-4 sm:px-6 lg:grid-cols-[.85fr_1.15fr] lg:px-8">
-          <div>
-            <p className={`font-bold uppercase tracking-[0.3em] ${red}`}>
-              Get a property assessment
-            </p>
-            <h2 className="mt-3 font-display text-4xl font-black uppercase leading-tight sm:text-5xl">
-              Tell us what needs maintaining
-            </h2>
-            <p className="mt-5 text-lg leading-8 text-steel">
-              Photos help. Acreage size helps. But if all you know is “the property is getting away from me,” that is enough to start the conversation.
-            </p>
+        <a
+          href="https://www.facebook.com/profile.php?id=61575389984384"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Facebook Business Page"
+          className="rounded-full border border-sand/40 px-4 py-2 text-sm font-bold text-sand transition hover:bg-white/10"
+        >
+          Facebook
+        </a>
+      </div>
+    </div>
 
-            <div className="mt-8 grid gap-4">
-              <div className="flex gap-4 rounded-2xl bg-white p-5 shadow-card">
-                <Clock className={`h-7 w-7 shrink-0 ${red}`} aria-hidden="true" />
+    <div className="flex flex-col gap-3 text-sm font-semibold text-dust/80 md:text-right">
+      <a href={phoneHref} className="hover:text-sand">
+        {phoneNumber}
+      </a>
 
-                <div>
-                  <h3 className="font-display text-2xl font-bold uppercase">
-                    Fast response
-                  </h3>
-                  <p className="mt-1 text-steel">
-                    Most assessment requests receive a same-day reply during normal working hours.
-                  </p>
-                </div>
-              </div>
+      <a href="mailto:anthonypmusetti@gmail.com" className="hover:text-sand">
+        anthonypmusetti@gmail.com
+      </a>
 
-              <div className="flex gap-4 rounded-2xl bg-white p-5 shadow-card">
-                <Hammer className={`h-7 w-7 shrink-0 ${red}`} aria-hidden="true" />
-
-                <div>
-                  <h3 className="font-display text-2xl font-bold uppercase">
-                    Practical maintenance plan
-                  </h3>
-                  <p className="mt-1 text-steel">
-                    If there is a smarter way to phase the work, reduce cost, or set up recurring maintenance, you will hear it.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <ContactForm />
-        </div>
-      </section>
-
-      <footer className="border-t border-white/10 bg-ink px-4 py-10 text-white sm:px-6 lg:px-8">
-        <div className="mx-auto flex max-w-7xl flex-col gap-8 md:flex-row md:items-center md:justify-between">
-          <div className="flex flex-col gap-4">
-            <div className="flex items-center gap-4">
-              <Image
-                src="/images/projects/LogoMark.svg"
-                alt="Right Size Equipment Services logo"
-                width={70}
-                height={70}
-                className="h-14 w-auto"
-              />
-
-              <div>
-                <p className="font-display text-2xl font-black uppercase">
-                  Right Size Equipment Services
-                </p>
-
-                <p className="mt-1 text-sm font-semibold text-dust/70">
-                  Acreage maintenance, fire mitigation, vacant lot care, and land stewardship for Texas properties.
-                </p>
-              </div>
-            </div>
-
-            <div className="flex gap-3">
-              <a href="https://share.google/Wbva0jZYkZ5eRiiOL" target="_blank" rel="noopener noreferrer" aria-label="Google Business Profile" className="rounded-full border border-sand/40 px-4 py-2 text-sm font-bold text-sand transition hover:bg-white/10">
-                Google
-              </a>
-
-              <a href="https://www.facebook.com/profile.php?id=61575389984384" target="_blank" rel="noopener noreferrer" aria-label="Facebook Business Page" className="rounded-full border border-sand/40 px-4 py-2 text-sm font-bold text-sand transition hover:bg-white/10">
-                Facebook
-              </a>
-            </div>
-          </div>
-
-          <div className="flex flex-col gap-3 text-sm font-semibold text-dust/80 md:text-right">
-            <a href={phoneHref} className="hover:text-sand">
-              {phoneNumber}
-            </a>
-
-            <a href="mailto:anthonypmusetti@gmail.com" className="hover:text-sand">
-              anthonypmusetti@gmail.com
-            </a>
-
-            <p>Boerne, TX & Surrounding Areas</p>
-          </div>
-        </div>
-      </footer>
-    </main>
-  );
-}
+      <p>Boerne, TX & Surrounding Areas</p>
+    </div>
+  </div>
+</footer>
