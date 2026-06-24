@@ -174,7 +174,7 @@ export default function LandingPage() {
   <div className="mx-auto flex max-w-7xl items-center justify-between gap-8 px-4 py-4 sm:px-6 lg:px-8">
     <a
       href="#top"
-      className="flex min-w-[360px] items-center gap-4"
+      className="flex items-center gap-3"
       aria-label="Right Size Land & Tractor home"
     >
       <Image
