@@ -112,7 +112,14 @@ const whoWeServe = [
   },
 ];
 
-
+ function Fade({ from, to }: { from: string; to: string }) {
+  return (
+    <div
+      className={`h-16 bg-gradient-to-b ${from} ${to}`}
+      aria-hidden="true"
+    />
+  );
+}
 export default function LandingPage() {
   const jsonLd = {
     "@context": "https://schema.org",
@@ -142,14 +149,7 @@ export default function LandingPage() {
     ],
   };
 
-  function Fade({ from, to }: { from: string; to: string }) {
-  return (
-    <div
-      className={`h-16 bg-gradient-to-b ${from} ${to}`}
-      aria-hidden="true"
-    />
-  );
-}
+ 
 
   return (
     <main className="overflow-hidden bg-dust text-ink">
