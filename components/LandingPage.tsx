@@ -159,33 +159,36 @@ export default function LandingPage() {
       />
 
 <header className="fixed inset-x-0 top-0 z-50 border-b border-white/10 bg-ink/[0.94] text-white shadow-lg backdrop-blur-xl">
-  <div className="mx-auto flex max-w-7xl items-center justify-between gap-8 px-4 py-4 sm:px-6 lg:px-8">
-    <a
-      href="#top"
-      className="flex items-center gap-3"
-      aria-label="Right Size Land & Tractor home"
-    >
+  <div className="mx-auto flex max-w-7xl items-center justify-between gap-8 px-4 py-3 sm:px-6 lg:px-8">
+<a
+  href="#top"
+  className="flex w-[340px] shrink-0 items-center gap-4"
+>
       <Image
         src="/images/projects/LogoMarkRed.png"
         alt="Right Size Land & Tractor logo"
         width={64}
         height={64}
-        className="h-14 w-14 rounded-xl object-contain"
+        className="h-12 w-12 rounded-xl object-contain"
         priority
       />
 
-      <span className="block leading-none">
-        <span className="block font-display text-xl font-black uppercase tracking-wide text-white">
-          Right Size Land & Tractor
-        </span>
-        <span className="mt-2 block text-xs font-semibold uppercase tracking-[0.24em] text-sand">
-          Acreage Maintenance & Land Stewardship
-        </span>
-      </span>
-    </a>
+<div className="leading-tight">
+  <h1 className="font-display text-2xl font-black uppercase tracking-wide text-white">
+    Right Size
+    <br />
+    Land & Tractor
+  </h1>
+
+  <p className="mt-2 text-[11px] font-semibold uppercase tracking-[0.28em] text-sand">
+    Property Maintenance
+    <br />
+    &amp; Land Stewardship
+  </p>
+</div>
 
     <nav
-      className="hidden flex-1 items-center justify-center gap-8 whitespace-nowrap text-sm font-black uppercase tracking-wide text-dust/90 lg:flex"
+      className="hidden flex-1 items-center justify-center gap-8 whitespace-nowrap text-[13px] font-bold uppercase tracking-wide text-dust/90 lg:flex"
       aria-label="Main navigation"
     >
       {navLinks.map((link) => (
@@ -199,7 +202,7 @@ export default function LandingPage() {
       ))}
     </nav>
 
-    <div className="hidden shrink-0 items-center gap-3 sm:flex">
+    <div className="hidden shrink-0 items-center gap-5 xl:flex"
       <a
         href={phoneHref}
         className="inline-flex items-center gap-3 whitespace-nowrap rounded-full border border-sand/40 px-5 py-3 text-sm font-black text-sand transition hover:bg-white/10"
