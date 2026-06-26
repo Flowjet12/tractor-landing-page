@@ -857,6 +857,9 @@ export default function LandingPage() {
 
       <p>Boerne, TX & Surrounding Areas</p>
     </div>
-  </>
+  </div>
+</footer>
+</div>
+</>
 );
 }
