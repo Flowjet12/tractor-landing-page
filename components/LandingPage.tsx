@@ -186,6 +186,7 @@ export default function LandingPage() {
     &amp; Land Stewardship
   </p>
 </div>
+</a>
 
     <nav
       className="hidden flex-1 items-center justify-center gap-8 whitespace-nowrap text-[13px] font-bold uppercase tracking-wide text-dust/90 lg:flex"
@@ -202,7 +203,7 @@ export default function LandingPage() {
       ))}
     </nav>
 
-    <div className="hidden shrink-0 items-center gap-5 xl:flex"
+    <div className="hidden shrink-0 items-center gap-5 xl:flex">
       <a
         href={phoneHref}
         className="inline-flex items-center gap-3 whitespace-nowrap rounded-full border border-sand/40 px-5 py-3 text-sm font-black text-sand transition hover:bg-white/10"
