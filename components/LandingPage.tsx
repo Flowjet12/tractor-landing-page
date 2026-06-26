@@ -351,7 +351,7 @@ export default function LandingPage() {
               const Icon = service.icon;
 
               return (
-                <article key={service.title} className={`group rounded-3xl border border-sand/70 bg-white p-6 shadow-card transition duration-300 hover:-translate-y-1 hover:${borderRed}`}>
+                <article key={service.title} className="group rounded-3xl border border-sand/70 bg-white p-6 shadow-card transition duration-300 hover:-translate-y-1 hover:border-[#C8102E]">
                   <div className={`flex h-12 w-12 items-center justify-center rounded-2xl bg-[#C8102E]/10 ${red} transition group-hover:${bgRed} group-hover:text-white`}>
                     <Icon className="h-6 w-6" aria-hidden="true" />
                   </div>
