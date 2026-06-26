@@ -25,7 +25,6 @@ const phoneHref = "tel:+18303026833";
 const red = "text-[#C8102E]";
 const bgRed = "bg-[#C8102E]";
 const hoverRed = "hover:bg-[#9f0d24]";
-const borderRed = "border-[#C8102E]";
 
 const navLinks = [
   { href: "#services", label: "Services" },
@@ -152,7 +151,8 @@ export default function LandingPage() {
  
 
   return (
-    <main className="overflow-hidden bg-dust text-ink">
+  <>
+    <div className="overflow-hidden bg-dust text-ink">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
@@ -857,5 +857,6 @@ export default function LandingPage() {
 
       <p>Boerne, TX & Surrounding Areas</p>
     </div>
-  </div>
-</footer>
+  </>
+);
+}
