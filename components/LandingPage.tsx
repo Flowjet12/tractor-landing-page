@@ -134,7 +134,7 @@ export default function LandingPage() {
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
-    name: "Right Size Equipment Services",
+    name: "Right Size Land & Tractor",
     description:
       "Owner-operated acreage maintenance, fire mitigation, hunting property preparation, vacant lot care, and land stewardship in the Texas Hill Country and greater San Antonio area.",
     telephone: "+1-830-302-6833",
