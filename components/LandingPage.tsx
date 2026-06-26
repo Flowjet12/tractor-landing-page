@@ -112,23 +112,6 @@ const whoWeServe = [
   },
 ];
 
-const plans = [
-  {
-    name: "Bronze",
-    text: "Great for seasonal maintenance needs.",
-    items: ["Quarterly property visit", "Mowing as needed", "Basic property check", "Photo updates"],
-  },
-  {
-    name: "Silver",
-    text: "Consistent care for peace of mind.",
-    items: ["Bi-monthly maintenance", "Driveway touch-ups", "Vegetation management", "Photo updates"],
-  },
-  {
-    name: "Gold",
-    text: "Comprehensive care for your property year-round.",
-    items: ["Monthly property stewardship", "Priority scheduling", "Seasonal maintenance planning", "Detailed reports & photos"],
-  },
-];
 
 export default function LandingPage() {
   const jsonLd = {
@@ -159,9 +142,14 @@ export default function LandingPage() {
     ],
   };
 
-  const Fade = ({ from, to }: { from: string; to: string }) => (
-    <div className={`h-16 bg-gradient-to-b ${from} ${to}`} aria-hidden="true" />
+  function Fade({ from, to }: { from: string; to: string }) {
+  return (
+    <div
+      className={`h-16 bg-gradient-to-b ${from} ${to}`}
+      aria-hidden="true"
+    />
   );
+}
 
   return (
     <main className="overflow-hidden bg-dust text-ink">
