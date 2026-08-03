@@ -624,40 +624,47 @@ export default function LandingPage() {
       <Fade from="from-ink" to="to-dust" />
 
       <section className="bg-dust py-20 sm:py-24" id="transformations">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <p className={`font-bold uppercase tracking-[0.3em] ${red}`}>
-            Property transformation
-          </p>
-          <h2 className="mt-3 font-display text-4xl font-black uppercase text-ink sm:text-5xl">
-            From neglected to manageable
-          </h2>
+  <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+    <p className={`font-bold uppercase tracking-[0.3em] ${red}`}>
+      Property transformation
+    </p>
 
-          <div className="mt-10 grid gap-6 md:grid-cols-2 lg:grid-cols-4">
-            {[
-              ["ShedPadBefore.jpg", "Overgrown or uneven ground"],
-              ["ShedPadDuring1.jpg", "Clearing and initial cleanup"],
-              ["ShedPadDuring2.jpg", "Material movement and shaping"],
-              ["ShedPadDone.jpg", "Clean, usable property improvement"],
-            ].map(([src, caption], index) => (
-              <figure key={src} className="group overflow-hidden rounded-2xl border border-sand/70 bg-white shadow-card">
-                <div className="relative aspect-[4/5]">
-                  <Image
-                    src={`/images/projects/${src}`}
-                    alt={caption}
-                    fill
-                    className="object-cover transition duration-500 group-hover:scale-105"
-                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 25vw"
-                  />
-                </div>
+    <h2 className="mt-3 font-display text-4xl font-black uppercase text-ink sm:text-5xl">
+      From overgrown to listing-ready
+    </h2>
 
-                <figcaption className="p-4 text-sm font-semibold text-charcoal">
-                  Step {index + 1}: {caption}
-                </figcaption>
-              </figure>
-            ))}
+    <p className="mt-5 max-w-3xl text-lg leading-8 text-steel">
+      This approximately 5.5-acre Boerne pasture was brought back under
+      control before the property was listed for sale.
+    </p>
+
+    <div className="mt-10 grid gap-6 md:grid-cols-2">
+      {[
+        ["mowbefore.jpg", "Before: Tall grass and overgrown pasture"],
+        ["mowafter.jpg", "After: Clean, manageable acreage"],
+      ].map(([src, caption]) => (
+        <figure
+          key={src}
+          className="group overflow-hidden rounded-2xl border border-sand/70 bg-white shadow-card"
+        >
+          <div className="relative aspect-[4/3]">
+            <Image
+              src={`/images/projects/${src}`}
+              alt={caption}
+              fill
+              className="object-cover transition duration-500 group-hover:scale-105"
+              sizes="(max-width: 768px) 100vw, 50vw"
+            />
           </div>
-        </div>
-      </section>
+
+          <figcaption className="p-5 font-semibold text-charcoal">
+            {caption}
+          </figcaption>
+        </figure>
+      ))}
+    </div>
+  </div>
+</section>
 
       <Fade from="from-dust" to="to-white" />
 
