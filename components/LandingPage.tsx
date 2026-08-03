@@ -38,8 +38,8 @@ const navLinks = [
 const services = [
   {
     icon: Trees,
-    title: "Fire Mitigation & Fuel Reduction",
-    text: "Reduce wildfire risk by controlling tall grass, heavy vegetation, cedar regrowth, and overgrown fence lines around homes, barns, roads, and hunting properties.",
+    title: "Pasture & Rangeland Management",
+    text: "Increase property value by controlling tall grass, heavy vegetation, cedar regrowth, and overgrown fence lines around homes, barns, roads, and hunting properties.",
   },
   {
     icon: Tractor,
@@ -308,7 +308,7 @@ export default function LandingPage() {
 
                   <div className="mt-6 grid gap-4">
                     {[
-                      ["Fire Readiness", "Fuel reduction, mowing, brush control"],
+                      ["Accessibility", "Brush control, mowing, access"],
                       ["Hunting Land", "Senderos, roads, camps, feeder access"],
                       ["Vacant Lots", "Clean, accessible, market-ready land"],
                     ].map(([title, text]) => (
