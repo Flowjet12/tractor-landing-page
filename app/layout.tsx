@@ -6,10 +6,11 @@ import "./globals.css";
 export const metadata: Metadata = {
   metadataBase: new URL("https://rightsizeland.com"),
   title:
-    "Texas Tractor Services | Brush Clearing, Driveway Grading & Dirt Work",
+    "Property Maintenance & Tractor Services | Boerne, TX | Right Size Land & Tractor",
   description:
-    "Owner-operated tractor services for Texas Hill Country and San Antonio area properties. Brush clearing, driveway grading, pad prep, dirt work, drainage improvement, and small acreage maintenance.",
+    "Owner-operated property maintenance, pasture management, hunting property preparation, vacant lot care, driveway repair, and acreage stewardship throughout Boerne and the Texas Hill Country.",
   keywords: [
+    "brush hogging",
     "land clearing Texas",
     "driveway grading",
     "tractor services near me",
