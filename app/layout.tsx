@@ -5,32 +5,40 @@ import "./globals.css";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://rightsizeland.com"),
+
   title:
-    "Property Maintenance & Tractor Services | Boerne, TX | Right Size Land & Tractor",
+    "Tractor Services & Property Maintenance in Boerne, TX | Right Size Land & Tractor",
+
   description:
-    "Owner-operated property maintenance, pasture management, hunting property preparation, vacant lot care, driveway repair, and acreage stewardship throughout Boerne and the Texas Hill Country.",
+    "Boerne-based tractor services and property maintenance for acreage, hunting land, vacant lots, and commercial properties. Brush mowing, driveway repair, grading, fire mitigation, and recurring land stewardship across the Texas Hill Country.",
+
   keywords: [
-    "brush hogging",
-    "land clearing Texas",
-    "driveway grading",
-    "tractor services near me",
-    "brush clearing",
-    "dirt work",
-    "Texas Hill Country tractor services",
-    "San Antonio land clearing",
+    "tractor services Boerne TX",
+    "brush hogging Boerne TX",
+    "acreage mowing Boerne",
+    "property maintenance Boerne TX",
+    "driveway grading Boerne",
+    "hunting property maintenance Texas",
+    "vacant lot mowing Boerne",
+    "land clearing Boerne TX",
+    "fire mitigation Boerne TX",
   ],
+
   openGraph: {
-    title: "Owner-Operated Tractor Services in the Texas Hill Country",
+    title:
+      "Right Size Land & Tractor | Boerne Property Maintenance & Tractor Services",
     description:
-      "Fast responses, honest pricing, and rugged tractor work for rural homes, ranches, and small acreage near San Antonio.",
+      "Acreage maintenance, brush mowing, driveway repair, grading, hunting-property care, and recurring land stewardship in Boerne and the Texas Hill Country.",
     type: "website",
     locale: "en_US",
-    url: "https://rightsizeland.com",
+    url: "https://rightsizeland.com/",
     siteName: "Right Size Land & Tractor",
   },
+
   alternates: {
-    canonical: "/",
+    canonical: "https://rightsizeland.com/",
   },
+
   robots: {
     index: true,
     follow: true,
