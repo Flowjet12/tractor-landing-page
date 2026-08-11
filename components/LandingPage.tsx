@@ -147,7 +147,6 @@ export default function LandingPage() {
       "Brush management",
     ],
   };
-
  
 
   return (
